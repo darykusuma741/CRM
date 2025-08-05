@@ -1,22 +1,21 @@
-import 'package:crm/common/components/custom_scaffold.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import 'controllers/home.controller.dart';
+import 'controllers/login.controller.dart';
 
-class HomeScreen extends GetView<HomeController> {
-  const HomeScreen({super.key});
+class LoginScreen extends GetView<LoginController> {
+  const LoginScreen({super.key});
   @override
   Widget build(BuildContext context) {
-    return CustomScaffold(
+    return Scaffold(
       appBar: AppBar(
-        title: const Text('HomeScreen'),
+        title: const Text('LoginScreen'),
         centerTitle: true,
       ),
       body: const Center(
         child: Text(
-          'HomeScreen is working',
+          'LoginScreen is working',
           style: TextStyle(fontSize: 20),
         ),
       ),
