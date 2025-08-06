@@ -31,6 +31,7 @@ flutter:
   assets:
     - assets/images/splash-screen-svg/
     - assets/images/icon-svg/
+    - assets/images/login-svg/
 
   fonts:
     - family: Lexend

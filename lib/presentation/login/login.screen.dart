@@ -1,4 +1,10 @@
+import 'package:crm/common/components/custom_scaffold.dart';
+import 'package:crm/common/constants/colors_name.dart';
+import 'package:crm/presentation/login/center_content/login.center_content.dart';
+import 'package:crm/presentation/login/form/login.form.dart';
+import 'package:crm/presentation/login/header/login.header.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 
@@ -8,15 +14,25 @@ class LoginScreen extends GetView<LoginController> {
   const LoginScreen({super.key});
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('LoginScreen'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'LoginScreen is working',
-          style: TextStyle(fontSize: 20),
+    double paddingTop = MediaQuery.of(context).padding.top;
+
+    return CustomScaffold(
+      backgroundColor: ColorsName.white,
+      body: SingleChildScrollView(
+        child: SizedBox(
+          width: double.infinity,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(height: 16.h + paddingTop),
+              LoginHeader(),
+              SizedBox(height: 65.68.h),
+              LoginCenterContent(),
+              SizedBox(height: 32.h),
+              LoginForm(),
+            ],
+          ),
         ),
       ),
     );
