@@ -6,6 +6,7 @@ class ImageAssets {
 
   // login
   static final String loginGroup1 = 'assets/images/login-svg/group-1.svg';
+  static final String loginGroup2 = 'assets/images/login-svg/group-2.svg';
   static final String loginLogo1 = 'assets/images/login-svg/logo-1.svg';
 
   // splash screen svg

@@ -20,11 +20,16 @@ class LoginForm extends GetView<LoginController> {
             CustomTextEditing(
               label: 'Email',
               hint: 'Enter your email',
+              controller: controller.ctrUser.value,
+              error: controller.errUser.value,
             ),
             SizedBox(height: 16.h),
             CustomTextEditing(
               label: 'Password',
               hint: 'Enter your password',
+              passwordField: true,
+              controller: controller.ctrPass.value,
+              error: controller.errPass.value,
             ),
             SizedBox(height: 32.h),
             InkWell(
@@ -42,7 +47,7 @@ class LoginForm extends GetView<LoginController> {
             ),
             SizedBox(height: 10.h),
             CustomButton(
-              onTap: () {},
+              onTap: controller.onCLickLogin,
               title: 'Login',
             )
           ],
