@@ -1,4 +1,5 @@
 import 'package:crm/common/components/custom_scaffold.dart';
+import 'package:crm/presentation/home/general_meeting/home.general_meeting.dart';
 import 'package:crm/presentation/home/header/home.header.dart';
 import 'package:crm/presentation/home/pipeline/home.pipeline.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,8 @@ class HomeScreen extends GetView<HomeController> {
             HomeHeader(),
             SizedBox(height: 14.h),
             HomePipeline(),
+            SizedBox(height: 18.h),
+            HomeGeneralMeeting(),
           ],
         ),
       ),

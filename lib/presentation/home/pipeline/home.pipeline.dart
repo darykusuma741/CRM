@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:crm/common/components/custom_ink_well.dart';
 import 'package:crm/common/constants/base_text.dart';
 import 'package:crm/common/constants/colors_name.dart';
 import 'package:crm/common/constants/image_assets.dart';
@@ -35,7 +36,7 @@ class HomePipeline extends GetView<HomeController> {
             padding: EdgeInsets.symmetric(horizontal: 16.w),
             child: Text(
               'Get Ready for Pipeline Activities!',
-              style: BaseText.grayCharcoal.copyWith(fontSize: 13.sp),
+              style: BaseText.grayCharcoal.copyWith(fontSize: 13.sp, fontWeight: FontWeight.w500),
             ),
           ),
           SizedBox(height: 8.h),
@@ -98,8 +99,12 @@ class HomeItemPipeline extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(color: ColorsName.white, borderRadius: BorderRadius.circular(6.r)),
+    return CustomInkWell(
+      onTap: () {},
+      decoration: BoxDecoration(
+        color: ColorsName.white,
+        borderRadius: BorderRadius.circular(6.r),
+      ),
       padding: EdgeInsets.symmetric(horizontal: 10.w),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,

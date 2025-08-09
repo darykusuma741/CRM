@@ -9,6 +9,7 @@ class ImageAssets {
   static final String iconSvgMeeting = 'assets/images/icon-svg/meeting.svg';
   static final String iconSvgToDo = 'assets/images/icon-svg/to-do.svg';
   static final String iconSvgDocument = 'assets/images/icon-svg/document.svg';
+  static final String iconSvgNotif1 = 'assets/images/icon-svg/notif-1.svg';
 
   // login
   static final String loginGroup1 = 'assets/images/login-svg/group-1.svg';
