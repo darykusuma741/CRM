@@ -134,4 +134,6 @@ class ColorsName {
   static const Color beigePastel = Color(0xFFF3EBDB);
   static const Color beigeLight = Color(0xFFFFFAF2);
   static const Color yellowBright = Color(0xFFFFB92B);
+  static const Color graySoftMedium = Color(0xFFC8C8C8);
+  static const Color grayDarkest = Color(0xFF313131);
 }

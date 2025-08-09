@@ -10,6 +10,10 @@ class ImageAssets {
   static final String iconSvgToDo = 'assets/images/icon-svg/to-do.svg';
   static final String iconSvgDocument = 'assets/images/icon-svg/document.svg';
   static final String iconSvgNotif1 = 'assets/images/icon-svg/notif-1.svg';
+  static final String iconSvgHome1 = 'assets/images/icon-svg/home-1.svg';
+  static final String iconSvgLeadsWhite = 'assets/images/icon-svg/leads-white.svg';
+  static final String iconSvgCalendarWhite = 'assets/images/icon-svg/calendar-white.svg';
+  static final String iconSvgProfileWhite = 'assets/images/icon-svg/profile-white.svg';
 
   // login
   static final String loginGroup1 = 'assets/images/login-svg/group-1.svg';

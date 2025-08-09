@@ -1,4 +1,5 @@
 import 'package:crm/common/components/custom_scaffold.dart';
+import 'package:crm/presentation/home/bottom_nav/home.bottom_nav.dart';
 import 'package:crm/presentation/home/general_meeting/home.general_meeting.dart';
 import 'package:crm/presentation/home/header/home.header.dart';
 import 'package:crm/presentation/home/pipeline/home.pipeline.dart';
@@ -16,6 +17,7 @@ class HomeScreen extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return CustomScaffold(
       light: true,
+      bottomNavigationBar: HomeBottomNav(),
       body: Column(
         children: [
           Expanded(

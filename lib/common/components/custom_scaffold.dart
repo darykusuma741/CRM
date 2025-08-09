@@ -17,6 +17,7 @@ class CustomScaffold extends StatelessWidget {
     this.backgroundColor,
     this.floatingActionButton,
     this.floatingActionButtonLocation,
+    this.bottomNavigationBar,
   });
   final bool light;
   final PreferredSizeWidget? appBar;
@@ -24,6 +25,7 @@ class CustomScaffold extends StatelessWidget {
   final Widget? body;
   final Widget? floatingActionButton;
   final FloatingActionButtonLocation? floatingActionButtonLocation;
+  final Widget? bottomNavigationBar;
 
   @override
   Widget build(BuildContext context) {
@@ -35,6 +37,7 @@ class CustomScaffold extends StatelessWidget {
       child: CustomLoading(
         child: Scaffold(
           appBar: appBar,
+          bottomNavigationBar: bottomNavigationBar,
           backgroundColor: backgroundColor ?? ColorsName.graySoft,
           body: Column(
             children: [
