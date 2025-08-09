@@ -1,5 +1,8 @@
 import 'package:crm/common/components/custom_scaffold.dart';
+import 'package:crm/presentation/home/header/home.header.dart';
+import 'package:crm/presentation/home/pipeline/home.pipeline.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 
@@ -10,14 +13,15 @@ class HomeScreen extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
-      appBar: AppBar(
-        title: const Text('HomeScreen'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'HomeScreen is working',
-          style: TextStyle(fontSize: 20),
+      light: true,
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            HomeHeader(),
+            SizedBox(height: 14.h),
+            HomePipeline(),
+          ],
         ),
       ),
     );

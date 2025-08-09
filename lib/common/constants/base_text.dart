@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:crm/common/constants/colors_name.dart';
 
-TextStyle textStyle = TextStyle(fontFamily: "Lexend", color: ColorsName.grayDarker, letterSpacing: 0.0);
+TextStyle textStyle = TextStyle(fontFamily: "Lexend", color: ColorsName.grayDarker, letterSpacing: 0.0, height: 1.0);
 
 class BaseText {
   static TextStyle white = textStyle.copyWith(color: ColorsName.white);
@@ -119,6 +119,8 @@ class BaseText {
   static TextStyle grayUltraPale = textStyle.copyWith(color: ColorsName.grayUltraPale);
   static TextStyle blueDarkest = textStyle.copyWith(color: ColorsName.blueDarkest);
   static TextStyle blueDeepSea = textStyle.copyWith(color: ColorsName.blueDeepSea);
+  static TextStyle greenPrimary = textStyle.copyWith(color: ColorsName.greenPrimary);
+  static TextStyle graySoftLight = textStyle.copyWith(color: ColorsName.graySoftLight);
 
   static FontWeight light = FontWeight.w300;
   static FontWeight regular = FontWeight.w400;
