@@ -3,7 +3,9 @@ class Routes {
     return SPLASH_SCREEN;
   }
 
+  static const CALL_ACTIVITIES = '/call-activities';
   static const HOME = '/home';
-  static const SPLASH_SCREEN = '/splash-screen';
   static const LOGIN = '/login';
+  static const SPLASH_SCREEN = '/splash-screen';
+  static const DOCUMENT_ACTIVITIES = '/document-activities';
 }

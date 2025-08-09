@@ -3,6 +3,7 @@ import 'package:crm/common/components/custom_ink_well.dart';
 import 'package:crm/common/constants/base_text.dart';
 import 'package:crm/common/constants/colors_name.dart';
 import 'package:crm/common/constants/image_assets.dart';
+import 'package:crm/infrastructure/navigation/routes.dart';
 import 'package:crm/presentation/home/controllers/home.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,7 +16,14 @@ class HomePipeline extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     final List<PipelineState> listPipelineState = [
-      PipelineState(title: "Call", count: 5, imagePath: ImageAssets.iconSvgCall),
+      PipelineState(
+        title: "Call",
+        count: 5,
+        imagePath: ImageAssets.iconSvgCall,
+        onTap: () {
+          Get.toNamed(Routes.CALL_ACTIVITIES);
+        },
+      ),
       PipelineState(title: "Meeting", count: 12, imagePath: ImageAssets.iconSvgMeeting),
       PipelineState(title: "To Do", count: 6, imagePath: ImageAssets.iconSvgToDo),
       PipelineState(title: "Document", count: 3, imagePath: ImageAssets.iconSvgDocument),
@@ -100,7 +108,7 @@ class HomeItemPipeline extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomInkWell(
-      onTap: () {},
+      onTap: statePipeline.onTap,
       decoration: BoxDecoration(
         color: ColorsName.white,
         borderRadius: BorderRadius.circular(6.r),
@@ -156,5 +164,7 @@ class PipelineState {
   final String title;
   final String imagePath;
   final int count;
-  PipelineState({required this.title, required this.count, required this.imagePath});
+  final void Function()? onTap;
+
+  PipelineState({required this.title, this.onTap, required this.count, required this.imagePath});
 }

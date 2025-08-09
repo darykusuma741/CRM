@@ -41,5 +41,15 @@ class Nav {
       page: () => const LoginScreen(),
       binding: LoginControllerBinding(),
     ),
+    GetPage(
+      name: Routes.CALL_ACTIVITIES,
+      page: () => const CallActivitiesScreen(),
+      binding: CallActivitiesControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.DOCUMENT_ACTIVITIES,
+      page: () => const DocumentActivitiesScreen(),
+      binding: DocumentActivitiesControllerBinding(),
+    ),
   ];
 }

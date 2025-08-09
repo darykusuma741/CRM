@@ -11,12 +11,14 @@ class CustomList<T> extends StatelessWidget {
     this.scroll = false,
     this.paddingDivider,
     this.dividerColor = ColorsName.grayCloud,
+    this.padding,
   });
   final List<T> items;
   final Widget? Function(BuildContext context, int index) itemBuilder;
   final bool scroll;
   final Color dividerColor;
   final EdgeInsetsGeometry? paddingDivider;
+  final EdgeInsetsGeometry? padding;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class CustomList<T> extends StatelessWidget {
       itemCount: items.length,
       shrinkWrap: scroll ? false : true,
       physics: scroll ? null : NeverScrollableScrollPhysics(),
-      padding: EdgeInsets.zero,
+      padding: padding ?? EdgeInsets.zero,
       separatorBuilder: (context, index) => Container(
         padding: paddingDivider ?? EdgeInsets.symmetric(horizontal: 16.w),
         child: CustomDivider(

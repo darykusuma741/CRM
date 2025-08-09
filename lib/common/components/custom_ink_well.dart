@@ -22,10 +22,8 @@ class _CustomInkWellState extends State<CustomInkWell> {
   Widget build(BuildContext context) {
     final spColor = (widget.splashColor ?? ColorsName.grayDark).withOpacity(0.1);
     return InkWell(
-      borderRadius: (widget.decoration?.borderRadius ?? BorderRadius.zero) as BorderRadius,
-      onTap: () {
-        widget.onTap;
-      },
+      borderRadius: (widget.decoration?.borderRadius ?? BorderRadius.circular(100.r)) as BorderRadius,
+      onTap: widget.onTap,
       onHighlightChanged: (value) {
         setState(() {
           _isPressed = value;

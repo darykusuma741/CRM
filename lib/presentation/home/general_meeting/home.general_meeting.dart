@@ -43,8 +43,8 @@ class HomeGeneralMeeting extends GetView<HomeController> {
             decoration: BoxDecoration(color: ColorsName.white, borderRadius: BorderRadius.circular(6.r)),
             child: CustomList(
               paddingDivider: EdgeInsets.all(0.0),
-              items: [1, 2, 3, 4, 5],
               scroll: true,
+              items: [1, 2, 3, 4, 5],
               itemBuilder: (context, index) {
                 return HomeGeneralMeetingItem(
                   stateN: HomeGeneralMeetingState(description: 'Quarterly Business Revieved', date: DateTime.now()),
@@ -114,7 +114,7 @@ class HomeGeneralMeetingItem extends StatelessWidget {
                 child: Center(
                   child: Text('Check-in', style: BaseText.blueSteel.copyWith(fontSize: 11.sp, fontWeight: FontWeight.w500)),
                 ),
-              )
+              ),
             ],
           ),
         ],
