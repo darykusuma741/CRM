@@ -3,13 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomInkWell extends StatefulWidget {
-  const CustomInkWell({super.key, this.child, this.onTap, this.height, this.padding, this.decoration, this.splashColor});
+  const CustomInkWell({super.key, this.child, this.padding, this.onTap, this.height, this.width, this.decoration, this.splashColor});
   final Widget? child;
   final void Function()? onTap;
   final double? height;
-  final EdgeInsetsGeometry? padding;
+  final double? width;
   final BoxDecoration? decoration;
   final Color? splashColor;
+  final EdgeInsetsGeometry? padding;
 
   @override
   State<CustomInkWell> createState() => _CustomInkWellState();
@@ -35,6 +36,7 @@ class _CustomInkWellState extends State<CustomInkWell> {
       child: AnimatedContainer(
         duration: Duration(milliseconds: 100),
         height: widget.height,
+        width: widget.width,
         padding: widget.padding,
         decoration: widget.decoration?.copyWith(
           color: _isPressed ? spColor : widget.decoration?.color ?? ColorsName.white,

@@ -106,7 +106,7 @@ class HomeGeneralMeetingItem extends StatelessWidget {
               CustomInkWell(
                 onTap: () {},
                 height: 30.h,
-                padding: EdgeInsets.symmetric(horizontal: 10.w),
+                width: 68.w,
                 decoration: BoxDecoration(
                   color: ColorsName.white,
                   border: Border.all(color: ColorsName.bluePastel),

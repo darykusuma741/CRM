@@ -26,7 +26,14 @@ class HomePipeline extends GetView<HomeController> {
       ),
       PipelineState(title: "Meeting", count: 12, imagePath: ImageAssets.iconSvgMeeting),
       PipelineState(title: "To Do", count: 6, imagePath: ImageAssets.iconSvgToDo),
-      PipelineState(title: "Document", count: 3, imagePath: ImageAssets.iconSvgDocument),
+      PipelineState(
+        title: "Document",
+        count: 3,
+        imagePath: ImageAssets.iconSvgDocument,
+        onTap: () {
+          Get.toNamed(Routes.DOCUMENT_ACTIVITIES);
+        },
+      ),
     ];
 
     final List<Widget> listWidgetView = [
