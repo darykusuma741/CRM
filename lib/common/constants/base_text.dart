@@ -121,6 +121,16 @@ class BaseText {
   static TextStyle blueDeepSea = textStyle.copyWith(color: ColorsName.blueDeepSea);
   static TextStyle greenPrimary = textStyle.copyWith(color: ColorsName.greenPrimary);
   static TextStyle graySoftLight = textStyle.copyWith(color: ColorsName.graySoftLight);
+  static TextStyle pinkPale = textStyle.copyWith(color: ColorsName.pinkPale);
+  static TextStyle redLightSoft = textStyle.copyWith(color: ColorsName.redLightSoft);
+  static TextStyle blueUltraSoft = textStyle.copyWith(color: ColorsName.blueUltraSoft);
+  static TextStyle bluePastelLight = textStyle.copyWith(color: ColorsName.bluePastelLight);
+  static TextStyle blueOceanDeep = textStyle.copyWith(color: ColorsName.blueOceanDeep);
+  static TextStyle greenMintSoft = textStyle.copyWith(color: ColorsName.greenMintSoft);
+  static TextStyle greenUltraSoft = textStyle.copyWith(color: ColorsName.greenUltraSoft);
+  static TextStyle beigePastel = textStyle.copyWith(color: ColorsName.beigePastel);
+  static TextStyle beigeLight = textStyle.copyWith(color: ColorsName.beigeLight);
+  static TextStyle yellowBright = textStyle.copyWith(color: ColorsName.yellowBright);
 
   static FontWeight light = FontWeight.w300;
   static FontWeight regular = FontWeight.w400;

@@ -16,6 +16,13 @@ class HomeHeaderProfile extends GetView<HomeController> {
           height: 36.w,
           width: 36.w,
           decoration: BoxDecoration(color: ColorsName.beigeCream, borderRadius: BorderRadius.circular(100.r)),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(100.r),
+            child: Image.network(
+              'https://www.georgetown.edu/wp-content/uploads/2022/02/Jkramerheadshot-scaled-e1645036825432-1050x1050-c-default.jpg',
+              fit: BoxFit.cover,
+            ),
+          ),
         ),
         SizedBox(width: 10.w),
         Column(
@@ -23,10 +30,11 @@ class HomeHeaderProfile extends GetView<HomeController> {
           children: [
             Row(
               children: [
-                Text('Hi,', style: BaseText.white.copyWith(fontSize: 13.sp, fontWeight: BaseText.regular)),
+                Text('Hi, ', style: BaseText.white.copyWith(fontSize: 13.sp, fontWeight: BaseText.regular)),
                 Text('Melina', style: BaseText.white.copyWith(fontSize: 13.sp, fontWeight: BaseText.semiBold)),
               ],
             ),
+            SizedBox(height: 2.h),
             Text('Sales Executive', style: BaseText.grayMedium.copyWith(fontSize: 12.sp, fontWeight: BaseText.light)),
           ],
         )

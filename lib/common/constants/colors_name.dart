@@ -124,4 +124,14 @@ class ColorsName {
   static const Color blueDeepSea = Color(0xFF1B63A4);
   static const Color greenPrimary = Color(0xFF27B378);
   static const Color graySoftLight = Color(0xFFF1F5F9);
+  static const Color pinkPale = Color(0xFFFAE9E9);
+  static const Color redLightSoft = Color(0xFFFFF2F2);
+  static const Color blueUltraSoft = Color(0xFFF2FAFF);
+  static const Color bluePastelLight = Color(0xFFDEEEFE);
+  static const Color blueOceanDeep = Color(0xFF127DC0);
+  static const Color greenMintSoft = Color(0xFFD6F5E6);
+  static const Color greenUltraSoft = Color(0xFFF2FFF9);
+  static const Color beigePastel = Color(0xFFF3EBDB);
+  static const Color beigeLight = Color(0xFFFFFAF2);
+  static const Color yellowBright = Color(0xFFFFB92B);
 }
