@@ -1,3 +1,4 @@
+export 'package:crm/presentation/add_lead/add_lead.screen.dart';
 export 'package:crm/presentation/call_activities/call_activities.screen.dart';
 export 'package:crm/presentation/check_in/check_in.screen.dart';
 export 'package:crm/presentation/document_activities/document_activities.screen.dart';

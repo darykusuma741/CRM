@@ -66,5 +66,10 @@ class Nav {
       page: () => const CheckInScreen(),
       binding: CheckInControllerBinding(),
     ),
+    GetPage(
+      name: Routes.ADD_LEAD,
+      page: () => const AddLeadScreen(),
+      binding: AddLeadControllerBinding(),
+    ),
   ];
 }

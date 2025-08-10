@@ -1,4 +1,5 @@
 import 'package:crm/common/components/custom_button.dart';
+import 'package:crm/common/constants/colors_name.dart';
 import 'package:crm/presentation/sna_form/controllers/sna_form.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -13,6 +14,7 @@ class SnaFormButton extends GetView<SnaFormController> {
       padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
       child: CustomButton(
         onTap: controller.onClickSubmit,
+        bgColor: ColorsName.blueDeep,
         title: 'Schedule',
       ),
     );

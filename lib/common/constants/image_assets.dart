@@ -21,6 +21,7 @@ class ImageAssets {
   static final String iconSvgDoubleArrowBlue = 'assets/images/icon-svg/double-arrow-blue.svg';
   static final String iconSvgDoubleArrowRed = 'assets/images/icon-svg/double-arrow-red.svg';
   static final String iconSvgPhotoCamera = 'assets/images/icon-svg/photo-camera.svg';
+  static final String iconSvgChevronRight = 'assets/images/icon-svg/chevron-right.svg';
 
   // login
   static final String loginGroup1 = 'assets/images/login-svg/group-1.svg';

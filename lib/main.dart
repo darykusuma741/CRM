@@ -34,25 +34,26 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        designSize: const Size(360, 800),
-        builder: (_, child) {
-          return GetMaterialApp(
-            // translations: AppTranslation(), // <- inisialisasi terjemahan
-            locale: Locale('en', 'US'), // <- default locale
-            fallbackLocale: Locale('en', 'US'),
-            // locale: Locale('en', 'US'), // <- default locale
-            // fallbackLocale: Locale('en', 'US'),
-            defaultTransition: Transition.fade,
-            transitionDuration: const Duration(milliseconds: 300),
-            initialRoute: initialRoute,
-            getPages: Nav.routes,
-            initialBinding: InitialBindings(),
-            debugShowCheckedModeBanner: false,
-            theme: AppThemeData.primary,
-            builder: (context, child) {
-              return child ?? CustomScaffold();
-            },
-          );
-        });
+      designSize: const Size(360, 800),
+      builder: (_, child) {
+        return GetMaterialApp(
+          // translations: AppTranslation(), // <- inisialisasi terjemahan
+          locale: Locale('en', 'US'), // <- default locale
+          fallbackLocale: Locale('en', 'US'),
+          // locale: Locale('en', 'US'), // <- default locale
+          // fallbackLocale: Locale('en', 'US'),
+          defaultTransition: Transition.fade,
+          transitionDuration: const Duration(milliseconds: 300),
+          initialRoute: initialRoute,
+          getPages: Nav.routes,
+          initialBinding: InitialBindings(),
+          debugShowCheckedModeBanner: false,
+          theme: AppThemeData.primary,
+          builder: (context, child) {
+            return child ?? CustomScaffold();
+          },
+        );
+      },
+    );
   }
 }

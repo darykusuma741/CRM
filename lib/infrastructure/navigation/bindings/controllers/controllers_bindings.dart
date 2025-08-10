@@ -1,3 +1,4 @@
+export 'package:crm/infrastructure/navigation/bindings/controllers/add_lead.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/call_activities.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/check_in.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/document_activities.controller.binding.dart'; 
