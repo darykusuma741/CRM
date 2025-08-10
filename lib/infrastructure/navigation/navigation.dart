@@ -56,5 +56,15 @@ class Nav {
       page: () => const SnaFormScreen(),
       binding: SnaFormControllerBinding(),
     ),
+    GetPage(
+      name: Routes.FACE_SCAN,
+      page: () => const FaceScanScreen(),
+      binding: FaceScanControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.CHECK_IN,
+      page: () => const CheckInScreen(),
+      binding: CheckInControllerBinding(),
+    ),
   ];
 }

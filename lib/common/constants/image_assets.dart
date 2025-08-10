@@ -14,6 +14,8 @@ class ImageAssets {
   static final String iconSvgLeadsWhite = 'assets/images/icon-svg/leads-white.svg';
   static final String iconSvgCalendarWhite = 'assets/images/icon-svg/calendar-white.svg';
   static final String iconSvgProfileWhite = 'assets/images/icon-svg/profile-white.svg';
+  static final String iconSvgFlipCamera = 'assets/images/icon-svg/flip-camera.svg';
+  static final String iconSvgArrowLeftBlack = 'assets/images/icon-svg/arrow-left-black.svg';
 
   // login
   static final String loginGroup1 = 'assets/images/login-svg/group-1.svg';
