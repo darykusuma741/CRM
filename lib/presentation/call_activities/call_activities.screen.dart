@@ -4,6 +4,7 @@ import 'package:crm/common/components/custom_scaffold.dart';
 import 'package:crm/common/constants/base_text.dart';
 import 'package:crm/common/constants/colors_name.dart';
 import 'package:crm/common/constants/image_assets.dart';
+import 'package:crm/infrastructure/navigation/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -66,7 +67,9 @@ class CallActivitiesScreen extends GetView<CallActivitiesController> {
                   ),
                 ),
                 CustomInkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Get.toNamed(Routes.CHECK_IN);
+                  },
                   height: 30.h,
                   width: 68.w,
                   decoration: BoxDecoration(

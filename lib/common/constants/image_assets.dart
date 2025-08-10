@@ -16,6 +16,11 @@ class ImageAssets {
   static final String iconSvgProfileWhite = 'assets/images/icon-svg/profile-white.svg';
   static final String iconSvgFlipCamera = 'assets/images/icon-svg/flip-camera.svg';
   static final String iconSvgArrowLeftBlack = 'assets/images/icon-svg/arrow-left-black.svg';
+  static final String iconSvgMyLocation = 'assets/images/icon-svg/my-location.svg';
+  static final String iconSvgDoubleArrowGray = 'assets/images/icon-svg/double-arrow-gray.svg';
+  static final String iconSvgDoubleArrowBlue = 'assets/images/icon-svg/double-arrow-blue.svg';
+  static final String iconSvgDoubleArrowRed = 'assets/images/icon-svg/double-arrow-red.svg';
+  static final String iconSvgPhotoCamera = 'assets/images/icon-svg/photo-camera.svg';
 
   // login
   static final String loginGroup1 = 'assets/images/login-svg/group-1.svg';

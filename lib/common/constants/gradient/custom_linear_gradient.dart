@@ -4,9 +4,9 @@ import 'package:crm/common/constants/colors_name.dart';
 class CustomLinearGradient {
   static LinearGradient blueCyanGradient = LinearGradient(
     colors: [
-      ColorsName.blueLight,
-      ColorsName.blueMedium,
-      ColorsName.cyan,
+      ColorsName.blueNavyDark,
+      ColorsName.blueDeep,
+      ColorsName.blueRoyalDeep,
     ],
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,

@@ -87,6 +87,7 @@ class CheckInController extends GetxController {
   }
 
   void onSubmit() async {
+    Get.back();
     // if (myLocationData.value?.latitude == null || myLocationData.value?.longitude == null) {
     //   MySnackBar.error(Get.context!, title: "Lokasi tidak terdeteksi");
     //   return;

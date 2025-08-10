@@ -30,7 +30,7 @@ class FaceScanNavigation extends GetView<FaceScanController> {
                     width: 32.w,
                     height: 32.h,
                     decoration: BoxDecoration(color: ColorsName.white, borderRadius: BorderRadius.circular(100.r)),
-                    child: SvgPicture.asset(ImageAssets.iconSvgArrowLeftBlack, width: 16.w),
+                    child: Center(child: SvgPicture.asset(ImageAssets.iconSvgArrowLeftBlack, width: 16.w)),
                   ),
                 ),
                 Column(
