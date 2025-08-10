@@ -1,9 +1,8 @@
+import 'package:crm/common/components/custom_modal_bottom.dart';
+import 'package:crm/presentation/document_activities/component/document_activities.detail.component.dart';
 import 'package:get/get.dart';
 
 class DocumentActivitiesController extends GetxController {
-  //TODO: Implement DocumentActivitiesController
-
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -19,5 +18,7 @@ class DocumentActivitiesController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
+  void onClickDetail() {
+    customModalBottom(DocumentActivitiesDetailComponent());
+  }
 }

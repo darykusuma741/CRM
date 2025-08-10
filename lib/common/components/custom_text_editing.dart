@@ -41,6 +41,10 @@ class CustomTextEditing extends StatelessWidget {
       borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(color: error == null ? ColorsName.grayPearly : ColorsName.redTomato, width: 1.w),
     );
+    final focusBorder = OutlineInputBorder(
+      borderRadius: BorderRadius.circular(8),
+      borderSide: BorderSide(color: error == null ? ColorsName.blueSteel : ColorsName.redTomato, width: 1.w),
+    );
 
     final hintStyle = BaseText.grayMedium.copyWith(fontSize: 13.sp);
     final textStyle = (enabled == true ? BaseText.grayIronDark : BaseText.grayMedium).copyWith(fontSize: 13.sp);
@@ -84,7 +88,7 @@ class CustomTextEditing extends StatelessWidget {
                   border: border,
                   enabledBorder: border,
                   errorBorder: border,
-                  focusedBorder: border,
+                  focusedBorder: focusBorder,
                   disabledBorder: border,
                   focusedErrorBorder: border,
                   fillColor: enabled == true ? ColorsName.white : ColorsName.grayWhiteSmoke,

@@ -14,6 +14,7 @@ class CustomButton extends StatefulWidget {
     this.enable = true,
     this.borderCustom,
     this.iconWidget,
+    this.bgColor,
   });
 
   final void Function()? onTap;
@@ -24,6 +25,7 @@ class CustomButton extends StatefulWidget {
   final Widget? iconWidget;
   final bool enable;
   final BoxBorder? borderCustom;
+  final Color? bgColor;
 
   @override
   State<CustomButton> createState() => _CustomButtonState();
@@ -49,8 +51,8 @@ class _CustomButtonState extends State<CustomButton> {
                     : widget.border
                         ? Colors.transparent
                         : _isPressed
-                            ? ColorsName.blueDeep
-                            : ColorsName.blueSteel,
+                            ? ColorsName.blueDeep.withOpacity(0.6)
+                            : widget.bgColor ?? ColorsName.blueSteel,
                 borderRadius: BorderRadius.circular(6.r),
                 border: widget.borderCustom,
               ),

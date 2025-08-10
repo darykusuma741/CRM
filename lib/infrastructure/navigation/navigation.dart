@@ -51,5 +51,10 @@ class Nav {
       page: () => const DocumentActivitiesScreen(),
       binding: DocumentActivitiesControllerBinding(),
     ),
+    GetPage(
+      name: Routes.SNA_FORM,
+      page: () => const SnaFormScreen(),
+      binding: SnaFormControllerBinding(),
+    ),
   ];
 }
