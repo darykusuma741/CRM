@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 class SnaFormController extends GetxController {
   List<String> activityRecItems = ['Call', 'Email', 'Meeting', 'Order Upsell', 'To Do', 'Upload Document'];
-  Rx<List<String>> activityRec = Rx([]);
+  Rxn<String?> activityRec = Rxn();
   Rxn<String?> activityRecErr = Rxn();
 
   Rxn<DateTime?> dueDate = Rxn();
@@ -33,7 +33,7 @@ class SnaFormController extends GetxController {
       next = false;
     }
 
-    if (activityRec.value.isEmpty) {
+    if (activityRec.value == null) {
       activityRecErr.value = "Field is required";
       next = false;
     }

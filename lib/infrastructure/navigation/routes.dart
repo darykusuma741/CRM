@@ -1,6 +1,6 @@
 class Routes {
   static Future<String> get initialRoute async {
-    return ADD_LEAD;
+    return SPLASH_SCREEN;
   }
 
   static const CALL_ACTIVITIES = '/call-activities';

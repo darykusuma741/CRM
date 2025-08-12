@@ -36,13 +36,7 @@ class SnaFormScreen extends GetView<SnaFormController> {
                       selectedItems: controller.activityRec.value,
                       error: controller.activityRecErr.value,
                       onSelected: (value, item) {
-                        var itemsSelect = [...controller.activityRec.value];
-                        if (value) {
-                          itemsSelect.add(item);
-                        } else {
-                          itemsSelect.remove(item);
-                        }
-                        controller.activityRec.value = itemsSelect;
+                        controller.activityRec.value = item;
                       },
                     ),
                     CustomTextEditing(

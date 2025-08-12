@@ -42,13 +42,13 @@ class DocumentActivitiesDetailComponent extends StatelessWidget {
           ),
           SizedBox(height: 16.h),
           CustomButton(
-            title: 'Done & Schedule Next',
+            title: 'Done',
             onTap: () {
               Get.back();
             },
             bgColor: ColorsName.blueDeep,
           ),
-          SizedBox(height: MediaQuery.of(context).padding.bottom),
+          SizedBox(height: 16.h),
         ],
       ),
     );

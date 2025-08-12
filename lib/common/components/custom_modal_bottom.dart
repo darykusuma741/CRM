@@ -18,6 +18,7 @@ void customModalBottom<T>(Widget child) {
               ),
               SizedBox(height: 16.h),
               child,
+              SizedBox(height: MediaQuery.of(context).padding.bottom),
             ],
           ),
         );

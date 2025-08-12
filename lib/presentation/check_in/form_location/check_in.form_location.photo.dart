@@ -69,7 +69,7 @@ class CheckInFormLocationPhoto extends GetView<CheckInController> {
           radius: 6.r,
           color: ColorsName.bluePastel,
           child: Container(
-            width: 117.w,
+            width: double.infinity,
             height: 34.h,
             decoration: BoxDecoration(color: ColorsName.grayIce, borderRadius: BorderRadius.circular(6.r)),
             child: Row(

@@ -18,7 +18,7 @@ class CustomSelectLabel<T> extends StatelessWidget {
   final bool required;
   final String? error;
   final void Function(bool value, T items)? onSelected;
-  final List<T> selectedItems;
+  final T selectedItems;
   final List<T> items;
 
   @override
@@ -40,11 +40,11 @@ class CustomSelectLabel<T> extends StatelessWidget {
         Wrap(
           spacing: 6.w,
           runSpacing: 6.h,
-          children: items.map((text) {
-            final bool isSelected = selectedItems.contains(text);
+          children: items.map((item) {
+            final bool isSelected = selectedItems == item;
             return ChoiceChip(
               label: Text(
-                text.toString(),
+                item.toString(),
                 style: (isSelected ? BaseText.blueSteel : BaseText.grayDarker).copyWith(fontSize: 12.sp),
               ),
               materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
@@ -60,7 +60,7 @@ class CustomSelectLabel<T> extends StatelessWidget {
                 ),
               ),
               onSelected: (value) {
-                if (onSelected != null) onSelected!(value, text);
+                if (onSelected != null) onSelected!(value, item);
               },
             );
           }).toList(),
