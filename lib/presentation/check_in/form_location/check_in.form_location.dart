@@ -2,11 +2,13 @@ import 'package:crm/common/components/custom_divider.dart';
 import 'package:crm/common/components/custom_slide_button.dart';
 import 'package:crm/common/constants/base_text.dart';
 import 'package:crm/common/constants/colors_name.dart';
+import 'package:crm/data/model/activity.model.dart';
 import 'package:crm/presentation/check_in/form_location/check_in.form_location.photo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:crm/presentation/check_in/controllers/check_in.controller.dart';
+import 'package:intl/intl.dart';
 
 class CheckInFormLocation extends GetView<CheckInController> {
   const CheckInFormLocation({super.key});
@@ -15,6 +17,7 @@ class CheckInFormLocation extends GetView<CheckInController> {
   Widget build(BuildContext context) {
     return Obx(() {
       final Radius borderRadius = Radius.circular(20.0);
+      final ActivityModel? item = controller.data.value;
       return AnimatedSlide(
         offset: controller.isVisible.value ? Offset(0, 0) : Offset(0, 1),
         duration: const Duration(milliseconds: 300),
@@ -49,11 +52,12 @@ class CheckInFormLocation extends GetView<CheckInController> {
                 SizedBox(height: 16.h),
                 Text('Summary'.tr, style: BaseText.graySlate.copyWith(fontSize: 11.sp, fontWeight: FontWeight.w400)),
                 SizedBox(height: 3.h),
-                Text('Intro Call with PT Sinar', style: BaseText.grayDarker.copyWith(fontSize: 12.sp, fontWeight: FontWeight.w400)),
+                Text(item?.name ?? '-', style: BaseText.grayDarker.copyWith(fontSize: 12.sp, fontWeight: FontWeight.w400)),
                 SizedBox(height: 12.h),
                 Text('Due Date'.tr, style: BaseText.graySlate.copyWith(fontSize: 11.sp, fontWeight: FontWeight.w400)),
                 SizedBox(height: 3.h),
-                Text('4 Aug 2025', style: BaseText.grayDarker.copyWith(fontSize: 12.sp, fontWeight: FontWeight.w400)),
+                Text(item?.dueDate == null ? '-' : DateFormat("d MMM yyyy").format(item!.dueDate),
+                    style: BaseText.grayDarker.copyWith(fontSize: 12.sp, fontWeight: FontWeight.w400)),
                 SizedBox(height: 12.h),
                 CustomDivider(),
                 SizedBox(height: 12.h),

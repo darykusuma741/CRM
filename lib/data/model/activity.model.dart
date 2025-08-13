@@ -2,36 +2,40 @@ import 'package:crm/common/abstract/base_model.dart';
 
 class ActivityModel extends BaseModel<ActivityModel> {
   int id;
-  String summary;
+  String name;
   String? notes;
   String? feedback;
   DateTime dueDate;
+  bool done;
   ActivityType activityType;
 
   ActivityModel({
     required this.id,
-    required this.summary,
+    required this.name,
     this.notes,
     this.feedback,
     required this.dueDate,
+    this.done = false,
     required this.activityType,
   });
 
   @override
   ActivityModel copyWith({
     int? id,
-    String? summary,
+    String? name,
     String? notes,
     String? feedback,
     DateTime? dueDate,
+    bool? done,
     ActivityType? activityType,
   }) {
     return ActivityModel(
       id: id ?? this.id,
-      summary: summary ?? this.summary,
+      name: name ?? this.name,
       notes: notes ?? this.notes,
       feedback: feedback ?? this.feedback,
       dueDate: dueDate ?? this.dueDate,
+      done: done ?? this.done,
       activityType: activityType ?? this.activityType,
     );
   }
@@ -42,4 +46,19 @@ enum ActivityType {
   document,
   meeting,
   toDo,
+}
+
+extension ActivityTypeExtension on ActivityType {
+  String toShortString() {
+    switch (this) {
+      case ActivityType.call:
+        return 'Call';
+      case ActivityType.document:
+        return 'Document';
+      case ActivityType.meeting:
+        return 'Meeting';
+      case ActivityType.toDo:
+        return 'To Do';
+    }
+  }
 }

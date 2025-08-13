@@ -3,6 +3,7 @@ import 'package:crm/common/components/custom_ink_well.dart';
 import 'package:crm/common/constants/base_text.dart';
 import 'package:crm/common/constants/colors_name.dart';
 import 'package:crm/common/constants/image_assets.dart';
+import 'package:crm/data/model/activity.model.dart';
 import 'package:crm/infrastructure/navigation/routes.dart';
 import 'package:crm/presentation/home/controllers/home.controller.dart';
 import 'package:flutter/material.dart';
@@ -15,78 +16,93 @@ class HomePipeline extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    final List<PipelineState> listPipelineState = [
-      PipelineState(
-        title: "Call",
-        count: 5,
-        imagePath: ImageAssets.iconSvgCall,
-        onTap: () {
-          Get.toNamed(Routes.CALL_ACTIVITIES);
-        },
-      ),
-      PipelineState(title: "Meeting", count: 12, imagePath: ImageAssets.iconSvgMeeting),
-      PipelineState(title: "To Do", count: 6, imagePath: ImageAssets.iconSvgToDo),
-      PipelineState(
-        title: "Document",
-        count: 3,
-        imagePath: ImageAssets.iconSvgDocument,
-        onTap: () {
-          Get.toNamed(Routes.DOCUMENT_ACTIVITIES);
-        },
-      ),
-    ];
+    return Obx(() {
+      List<ActivityModel> allDataCall = controller.ctrActivityMain.allDataCall.value;
+      List<ActivityModel> allDataDoc = controller.ctrActivityMain.allDataDoc.value;
+      List<ActivityModel> allDataMeeting = controller.ctrActivityMain.allDataMeeting.value;
+      List<ActivityModel> allDataToDo = controller.ctrActivityMain.allDataToDo.value;
 
-    final List<Widget> listWidgetView = [
-      _buildListWidgetView(listPipelineState),
-      _buildListWidgetView(listPipelineState),
-    ];
+      final List<PipelineState> listPipelineState = [
+        PipelineState(
+          title: "Call",
+          count: allDataCall.length,
+          imagePath: ImageAssets.iconSvgCall,
+          onTap: () {
+            Get.toNamed(Routes.CALL_ACTIVITIES, arguments: allDataCall);
+          },
+        ),
+        PipelineState(
+          title: "Meeting",
+          count: allDataMeeting.length,
+          imagePath: ImageAssets.iconSvgMeeting,
+        ),
+        PipelineState(
+          title: "To Do",
+          count: allDataToDo.length,
+          imagePath: ImageAssets.iconSvgToDo,
+        ),
+        PipelineState(
+          title: "Document",
+          count: allDataDoc.length,
+          imagePath: ImageAssets.iconSvgDocument,
+          onTap: () {
+            Get.toNamed(Routes.DOCUMENT_ACTIVITIES, arguments: allDataDoc);
+          },
+        ),
+      ];
 
-    final selectIndex = 0.obs;
+      final List<Widget> listWidgetView = [
+        _buildListWidgetView(listPipelineState),
+        _buildListWidgetView(listPipelineState),
+      ];
 
-    return Obx(
-      () => Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 16.w),
-            child: Text(
-              'Get Ready for Pipeline Activities!',
-              style: BaseText.grayCharcoal.copyWith(fontSize: 13.sp, fontWeight: FontWeight.w500),
+      final selectIndex = 0.obs;
+
+      return Obx(
+        () => Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 16.w),
+              child: Text(
+                'Get Ready for Pipeline Activities!',
+                style: BaseText.grayCharcoal.copyWith(fontSize: 13.sp, fontWeight: FontWeight.w500),
+              ),
             ),
-          ),
-          SizedBox(height: 8.h),
-          CarouselSlider(
-            options: CarouselOptions(
-              autoPlay: false,
-              viewportFraction: 1.0,
-              enlargeCenterPage: false,
-              aspectRatio: 3.4612,
-              onPageChanged: (index, reason) => selectIndex.value = index,
+            SizedBox(height: 8.h),
+            CarouselSlider(
+              options: CarouselOptions(
+                autoPlay: false,
+                viewportFraction: 1.0,
+                enlargeCenterPage: false,
+                aspectRatio: 3.4612,
+                onPageChanged: (index, reason) => selectIndex.value = index,
+              ),
+              items: List.generate(listWidgetView.length, (index) {
+                return listWidgetView[index];
+              }),
             ),
-            items: List.generate(listWidgetView.length, (index) {
-              return listWidgetView[index];
-            }),
-          ),
-          SizedBox(height: 10.h),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            spacing: 4.w,
-            children: List.generate(listWidgetView.length, (index) {
-              return AnimatedContainer(
-                duration: Duration(milliseconds: 500),
-                height: 5.w,
-                width: selectIndex.value == index ? 12.w : 5.w,
-                decoration: BoxDecoration(
-                  color: selectIndex.value == index ? ColorsName.blueSteel : ColorsName.grayAsh,
-                  borderRadius: BorderRadius.circular(100.r),
-                ),
-              );
-            }),
-          ),
-        ],
-      ),
-    );
+            SizedBox(height: 10.h),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              spacing: 4.w,
+              children: List.generate(listWidgetView.length, (index) {
+                return AnimatedContainer(
+                  duration: Duration(milliseconds: 500),
+                  height: 5.w,
+                  width: selectIndex.value == index ? 12.w : 5.w,
+                  decoration: BoxDecoration(
+                    color: selectIndex.value == index ? ColorsName.blueSteel : ColorsName.grayAsh,
+                    borderRadius: BorderRadius.circular(100.r),
+                  ),
+                );
+              }),
+            ),
+          ],
+        ),
+      );
+    });
   }
 
   Widget _buildListWidgetView(List<PipelineState> listPipelineState) {

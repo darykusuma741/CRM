@@ -1,9 +1,9 @@
+import 'package:crm/data/model/activity.model.dart';
 import 'package:get/get.dart';
 
 class CallActivitiesController extends GetxController {
-  //TODO: Implement CallActivitiesController
+  Rx<List<ActivityModel>> data = Rx(Get.arguments ?? []);
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -18,6 +18,4 @@ class CallActivitiesController extends GetxController {
   void onClose() {
     super.onClose();
   }
-
-  void increment() => count.value++;
 }

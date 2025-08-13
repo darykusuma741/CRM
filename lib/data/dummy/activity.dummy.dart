@@ -14,7 +14,7 @@ class ActivityDummy {
   static List<ActivityModel> dataCall = _summaryCall.map((summary) {
     return ActivityModel(
       id: Random().nextInt(10000),
-      summary: summary,
+      name: summary,
       dueDate: DateTime.now().add(Duration(days: Random().nextInt(5))),
       notes: 'Discussed solutions and gathered client requirements.',
       feedback: 'Good response, follow up next week',
@@ -34,7 +34,7 @@ class ActivityDummy {
   static List<ActivityModel> dataDocument = _summaryDocument.map((summary) {
     return ActivityModel(
       id: Random().nextInt(10000),
-      summary: summary,
+      name: summary,
       dueDate: DateTime.now().add(Duration(days: Random().nextInt(7))),
       notes: 'Submitted document for client review.',
       feedback: 'Pending response',
@@ -54,7 +54,7 @@ class ActivityDummy {
   static List<ActivityModel> dataMeeting = _summaryMeeting.map((summary) {
     return ActivityModel(
       id: Random().nextInt(10000),
-      summary: summary,
+      name: summary,
       dueDate: DateTime.now().add(Duration(days: Random().nextInt(10))),
       notes: 'Discussed milestones, blockers, and next steps.',
       feedback: 'Positive alignment with stakeholders',
@@ -74,7 +74,7 @@ class ActivityDummy {
   static List<ActivityModel> dataToDo = _summaryToDo.map((summary) {
     return ActivityModel(
       id: Random().nextInt(10000),
-      summary: summary,
+      name: summary,
       dueDate: DateTime.now().add(Duration(days: Random().nextInt(14))),
       notes: 'Ensure all tasks are completed before deadline.',
       feedback: 'In progress',

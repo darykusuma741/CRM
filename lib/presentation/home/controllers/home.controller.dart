@@ -1,6 +1,8 @@
+import 'package:crm/controller/activity.main.controller.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
+  ActivityMainController ctrActivityMain = Get.put(ActivityMainController());
   Rx<DateTime> initialDate = Rx(DateTime.now());
 
   @override
@@ -10,6 +12,7 @@ class HomeController extends GetxController {
 
   @override
   void onReady() {
+    ctrActivityMain.getData();
     super.onReady();
   }
 

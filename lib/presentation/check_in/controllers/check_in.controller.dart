@@ -4,11 +4,14 @@ import 'dart:io';
 import 'package:crm/common/components/custom_loading/custom_loading.controller.dart';
 import 'package:crm/common/helper/my_location.helper.dart';
 import 'package:crm/common/helper/my_snack_bar.dart';
+import 'package:crm/data/model/activity.model.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
 
 class CheckInController extends GetxController {
+  Rxn<ActivityModel?> data = Rxn(Get.arguments);
+
   final Rx<Completer<GoogleMapController>> ctrGoogleMap = Rx(Completer<GoogleMapController>());
   final Rx<CameraPosition> initialCameraPosition = Rx(CameraPosition(
     target: LatLng(-6.174692567487111, 106.78966208650647),

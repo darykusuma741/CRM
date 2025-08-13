@@ -3,12 +3,16 @@ import 'package:crm/common/components/custom_divider.dart';
 import 'package:crm/common/components/custom_text_editing.dart';
 import 'package:crm/common/constants/base_text.dart';
 import 'package:crm/common/constants/colors_name.dart';
+import 'package:crm/data/model/activity.model.dart';
+import 'package:crm/presentation/document_activities/controllers/document_activities.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
-class DocumentActivitiesDetailComponent extends StatelessWidget {
-  const DocumentActivitiesDetailComponent({super.key});
+class DocumentActivitiesDetailComponent extends GetView<DocumentActivitiesController> {
+  const DocumentActivitiesDetailComponent(this.item, {super.key});
+  final ActivityModel item;
 
   @override
   Widget build(BuildContext context) {
@@ -23,14 +27,13 @@ class DocumentActivitiesDetailComponent extends StatelessWidget {
             style: BaseText.grayCharcoal.copyWith(fontSize: 13.sp, fontWeight: FontWeight.w500),
           ),
           SizedBox(height: 16.h),
-          DocumentActivitiesDetailComponentItem(label: "Summary", content: "Document Detail"),
+          DocumentActivitiesDetailComponentItem(label: "Activity Name", content: item.name),
           SizedBox(height: 12.h),
-          DocumentActivitiesDetailComponentItem(label: "Activity Type", content: "Call"),
+          DocumentActivitiesDetailComponentItem(label: "Activity Type", content: item.activityType.toShortString()),
           SizedBox(height: 12.h),
-          DocumentActivitiesDetailComponentItem(label: "Due Date", content: "4 Aug 2025"),
+          DocumentActivitiesDetailComponentItem(label: "Due Date", content: DateFormat("d MMM yyyy").format(item.dueDate)),
           SizedBox(height: 12.h),
-          DocumentActivitiesDetailComponentItem(
-              label: "Notes", content: "Intro call to present solutions. Discussed pain points in inventory. Next: send deck + schedule demo."),
+          DocumentActivitiesDetailComponentItem(label: "Notes", content: item.notes ?? '-'),
           SizedBox(height: 16.h),
           CustomDivider(),
           SizedBox(height: 16.h),
@@ -42,10 +45,8 @@ class DocumentActivitiesDetailComponent extends StatelessWidget {
           ),
           SizedBox(height: 16.h),
           CustomButton(
-            title: 'Done',
-            onTap: () {
-              Get.back();
-            },
+            title: 'Submit',
+            onTap: () => controller.onSubmit(item),
             bgColor: ColorsName.blueDeep,
           ),
           SizedBox(height: 16.h),
@@ -69,7 +70,7 @@ class DocumentActivitiesDetailComponentItem extends StatelessWidget {
           label,
           style: BaseText.graySlate.copyWith(fontSize: 11.sp, fontWeight: FontWeight.w400),
         ),
-        SizedBox(height: 1.h),
+        SizedBox(height: 3.h),
         Text(
           content,
           style: BaseText.grayDarker.copyWith(fontSize: 12.sp, fontWeight: FontWeight.w400),

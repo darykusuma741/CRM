@@ -26,6 +26,9 @@ class ImageAssets {
   static final String iconSvgCalendar1 = 'assets/images/icon-svg/calendar-1.svg';
   static final String iconSvgLeads1 = 'assets/images/icon-svg/leads-1.svg';
   static final String iconSvgHomeWhite = 'assets/images/icon-svg/home-white.svg';
+  static final String iconSvgErrorWhite = 'assets/images/icon-svg/error-white.svg';
+  static final String iconSvgCheckWhite = 'assets/images/icon-svg/check-white.svg';
+  static final String iconWarningWhite = 'assets/images/icon/icon-warning-white.png';
 
   // login
   static final String loginGroup1 = 'assets/images/login-svg/group-1.svg';
