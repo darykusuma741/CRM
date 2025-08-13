@@ -28,7 +28,8 @@ class ImageAssets {
   static final String iconSvgHomeWhite = 'assets/images/icon-svg/home-white.svg';
   static final String iconSvgErrorWhite = 'assets/images/icon-svg/error-white.svg';
   static final String iconSvgCheckWhite = 'assets/images/icon-svg/check-white.svg';
-  static final String iconWarningWhite = 'assets/images/icon/icon-warning-white.png';
+  static final String iconSvgWarningWhite = 'assets/images/icon-svg/icon-warning-white.png';
+  static final String iconSvgWhatsapp1 = 'assets/images/icon-svg/whatsapp-1.svg';
 
   // login
   static final String loginGroup1 = 'assets/images/login-svg/group-1.svg';

@@ -24,4 +24,14 @@ class ActivityMainController extends GetxController {
     }
     return items;
   }
+
+  Future<List<ActivityModel>> onDoneCallActivity(ActivityModel item) async {
+    final items = allDataCall.value;
+    final index = items.indexWhere((e) => e.id == item.id);
+    if (index > 0) {
+      items.removeAt(index);
+      allDataCall.value = [...items];
+    }
+    return items;
+  }
 }

@@ -72,9 +72,7 @@ class CallActivitiesScreen extends GetView<CallActivitiesController> {
                     ),
                   ),
                   CustomInkWell(
-                    onTap: () {
-                      // Get.toNamed(Routes.CHECK_IN, arguments: item);
-                    },
+                    onTap: () => controller.onClickDetail(item),
                     height: 30.h,
                     width: 68.w,
                     decoration: BoxDecoration(

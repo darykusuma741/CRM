@@ -19,7 +19,7 @@ class CustomModal {
   }
 
   Future warning() async {
-    await _createDialog(ImageAssets.iconWarningWhite, ColorsName.yellowSun);
+    await _createDialog(ImageAssets.iconSvgWarningWhite, ColorsName.yellowSun);
   }
 
   Future danger() async {

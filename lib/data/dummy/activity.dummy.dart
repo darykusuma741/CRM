@@ -18,6 +18,7 @@ class ActivityDummy {
       dueDate: DateTime.now().add(Duration(days: Random().nextInt(5))),
       notes: 'Discussed solutions and gathered client requirements.',
       feedback: 'Good response, follow up next week',
+      wa: "6288242286199",
       activityType: ActivityType.call,
     );
   }).toList();
