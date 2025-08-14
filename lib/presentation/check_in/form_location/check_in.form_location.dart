@@ -4,6 +4,7 @@ import 'package:crm/common/constants/base_text.dart';
 import 'package:crm/common/constants/colors_name.dart';
 import 'package:crm/data/model/activity.model.dart';
 import 'package:crm/presentation/check_in/form_location/check_in.form_location.photo.dart';
+import 'package:crm/presentation/check_in/form_location/check_in.form_location.your_location.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -48,26 +49,50 @@ class CheckInFormLocation extends GetView<CheckInController> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Call Detail'.tr, style: BaseText.grayCharcoalDark.copyWith(fontSize: 13.sp, fontWeight: FontWeight.w500)),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text('Check-in Detail'.tr, style: BaseText.grayCharcoalDark.copyWith(fontSize: 13.sp, fontWeight: FontWeight.w500)),
+                    InkWell(
+                      child: Row(
+                        children: [
+                          Text('View This Pipeline'.tr, style: BaseText.blueSteel.copyWith(fontSize: 12.sp, fontWeight: FontWeight.w500)),
+                          SizedBox(width: 2.w),
+                          Icon(Icons.arrow_forward_ios_rounded, color: ColorsName.blueSteel, size: 10.sp)
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
                 SizedBox(height: 16.h),
-                Text('Summary'.tr, style: BaseText.graySlate.copyWith(fontSize: 11.sp, fontWeight: FontWeight.w400)),
+                CheckInFormLocationYourLocation(),
+                SizedBox(height: 12.h),
+                Text('Activity Name'.tr, style: BaseText.graySlate.copyWith(fontSize: 11.sp, fontWeight: FontWeight.w400)),
                 SizedBox(height: 3.h),
                 Text(item?.name ?? '-', style: BaseText.grayDarker.copyWith(fontSize: 12.sp, fontWeight: FontWeight.w400)),
-                SizedBox(height: 12.h),
-                Text('Due Date'.tr, style: BaseText.graySlate.copyWith(fontSize: 11.sp, fontWeight: FontWeight.w400)),
+                SizedBox(height: 16.h),
+                Text('Activity Type'.tr, style: BaseText.graySlate.copyWith(fontSize: 11.sp, fontWeight: FontWeight.w400)),
                 SizedBox(height: 3.h),
-                Text(item?.dueDate == null ? '-' : DateFormat("d MMM yyyy").format(item!.dueDate),
+                Text(item?.activityType.toShortString() ?? '-', style: BaseText.grayDarker.copyWith(fontSize: 12.sp, fontWeight: FontWeight.w400)),
+                SizedBox(height: 12.h),
+                Text('Date and Time'.tr, style: BaseText.graySlate.copyWith(fontSize: 11.sp, fontWeight: FontWeight.w400)),
+                SizedBox(height: 3.h),
+                Text(item?.dueDate == null ? '-' : DateFormat("d MMM yyyy, 10:00 - 11.30").format(item!.dueDate),
                     style: BaseText.grayDarker.copyWith(fontSize: 12.sp, fontWeight: FontWeight.w400)),
+                SizedBox(height: 16.h),
+                Text('Link meeting'.tr, style: BaseText.graySlate.copyWith(fontSize: 11.sp, fontWeight: FontWeight.w400)),
+                SizedBox(height: 3.h),
+                Text('4 Aug 2025', style: BaseText.grayDarker.copyWith(fontSize: 12.sp, fontWeight: FontWeight.w400)),
+                SizedBox(height: 16.h),
+                Text('Description'.tr, style: BaseText.graySlate.copyWith(fontSize: 11.sp, fontWeight: FontWeight.w400)),
+                SizedBox(height: 3.h),
+                Text(item?.description ?? '-', style: BaseText.grayDarker.copyWith(fontSize: 12.sp, fontWeight: FontWeight.w400)),
                 SizedBox(height: 12.h),
                 CustomDivider(),
                 SizedBox(height: 12.h),
                 Text('Photo check-in required!'.tr, style: BaseText.graySlate.copyWith(fontSize: 11.sp, fontWeight: FontWeight.w400)),
                 SizedBox(height: 4.h),
                 CheckInFormLocationPhoto(),
-                SizedBox(height: 12.h),
-                Text('Locating You'.tr, style: BaseText.grayCharcoal.copyWith(fontSize: 13.sp, fontWeight: FontWeight.w500)),
-                SizedBox(height: 6.h),
-                Text('Searching for your current location...', style: BaseText.graySlate.copyWith(fontSize: 11.sp, fontWeight: FontWeight.w400)),
                 SizedBox(height: 16.h),
                 CustomSlideButton(
                   title: 'Kick off your workday',

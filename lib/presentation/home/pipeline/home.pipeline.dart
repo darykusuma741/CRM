@@ -35,6 +35,9 @@ class HomePipeline extends GetView<HomeController> {
           title: "Meeting",
           count: allDataMeeting.length,
           imagePath: ImageAssets.iconSvgMeeting,
+          onTap: () {
+            Get.toNamed(Routes.MEETING_ACTIVITIES, arguments: allDataMeeting);
+          },
         ),
         PipelineState(
           title: "To Do",

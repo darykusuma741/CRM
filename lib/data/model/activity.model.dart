@@ -6,6 +6,7 @@ class ActivityModel extends BaseModel<ActivityModel> {
   String? notes;
   String? feedback;
   String? wa;
+  String? description;
   DateTime dueDate;
   bool done;
   ActivityType activityType;
@@ -16,6 +17,7 @@ class ActivityModel extends BaseModel<ActivityModel> {
     this.notes,
     this.feedback,
     this.wa,
+    this.description,
     required this.dueDate,
     this.done = false,
     required this.activityType,
@@ -28,6 +30,7 @@ class ActivityModel extends BaseModel<ActivityModel> {
     String? notes,
     String? feedback,
     String? wa,
+    String? description,
     DateTime? dueDate,
     bool? done,
     ActivityType? activityType,
@@ -38,6 +41,7 @@ class ActivityModel extends BaseModel<ActivityModel> {
       notes: notes ?? this.notes,
       feedback: feedback ?? this.feedback,
       wa: wa ?? this.wa,
+      description: description ?? this.description,
       dueDate: dueDate ?? this.dueDate,
       done: done ?? this.done,
       activityType: activityType ?? this.activityType,

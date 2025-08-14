@@ -60,6 +60,7 @@ class ActivityDummy {
       notes: 'Discussed milestones, blockers, and next steps.',
       feedback: 'Positive alignment with stakeholders',
       activityType: ActivityType.meeting,
+      description: 'An initial meeting to officially start the project, align team members, clarify objectives, timelines.',
     );
   }).toList();
 

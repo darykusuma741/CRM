@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:crm/common/components/custom_loading/custom_loading.controller.dart';
+import 'package:crm/common/google_service.dart';
 import 'package:crm/common/helper/my_location.helper.dart';
 import 'package:crm/common/helper/my_snack_bar.dart';
 import 'package:crm/data/model/activity.model.dart';
@@ -21,6 +22,7 @@ class CheckInController extends GetxController {
   final Rxn<LocationData?> myLocationData = Rxn();
   final CustomLoadingController ctrLoading = Get.find<CustomLoadingController>();
   RxBool isVisible = false.obs;
+  final Rxn<String?> address = Rxn();
   final Rxn<File?> photo = Rxn();
 
   @override
@@ -56,7 +58,7 @@ class CheckInController extends GetxController {
       if (myLocationData.value?.latitude == null || myLocationData.value?.longitude == null) throw 'No Location Data';
 
       addMarker(LatLng(myLocationData.value!.latitude!, myLocationData.value!.longitude!));
-      // address.value = await LocationService().getAddress(myLocationData.value!.latitude!, myLocationData.value!.longitude!);
+      address.value = await LocationService().getAddress(myLocationData.value!.latitude!, myLocationData.value!.longitude!);
 
       final GoogleMapController controller = await ctrGoogleMap.value.future;
       CameraPosition kLake = CameraPosition(

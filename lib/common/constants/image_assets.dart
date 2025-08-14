@@ -30,6 +30,7 @@ class ImageAssets {
   static final String iconSvgCheckWhite = 'assets/images/icon-svg/check-white.svg';
   static final String iconSvgWarningWhite = 'assets/images/icon-svg/icon-warning-white.png';
   static final String iconSvgWhatsapp1 = 'assets/images/icon-svg/whatsapp-1.svg';
+  static final String iconSvgLocation = 'assets/images/icon-svg/location.svg';
 
   // login
   static final String loginGroup1 = 'assets/images/login-svg/group-1.svg';

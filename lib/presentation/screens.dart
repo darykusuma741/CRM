@@ -5,5 +5,6 @@ export 'package:crm/presentation/document_activities/document_activities.screen.
 export 'package:crm/presentation/face_scan/face_scan.screen.dart';
 export 'package:crm/presentation/home/home.screen.dart';
 export 'package:crm/presentation/login/login.screen.dart';
+export 'package:crm/presentation/meeting_activities/meeting_activities.screen.dart';
 export 'package:crm/presentation/sna_form/sna_form.screen.dart';
 export 'package:crm/presentation/splash_screen/splash_screen.screen.dart';

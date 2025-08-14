@@ -142,4 +142,5 @@ class ColorsName {
   static const Color blueNavyDark = Color(0xFF123A5C);
   static const Color grayIce = Color(0xFFF6F9FB);
   static const Color greenMintPale = Color(0xFFE5F9F0);
+  static const Color grayUltraWhite = Color(0xFFFBFBFB);
 }
