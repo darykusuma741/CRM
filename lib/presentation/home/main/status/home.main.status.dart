@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class HomeStatus extends GetView<HomeController> {
-  const HomeStatus({super.key});
+class HomeMainStatus extends GetView<HomeController> {
+  const HomeMainStatus({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,28 +21,28 @@ class HomeStatus extends GetView<HomeController> {
             crossAxisAlignment: CrossAxisAlignment.start,
             spacing: 8.w,
             children: [
-              HomeStatusItem(
+              HomeMainStatusItem(
                 title: 'Overdues',
                 count: 4,
                 color: ColorsName.redLightSoft,
                 borderColor: ColorsName.pinkPale,
                 style: BaseText.redLight,
               ),
-              HomeStatusItem(
+              HomeMainStatusItem(
                 title: 'Planned',
                 count: 12,
                 color: ColorsName.blueUltraSoft,
                 borderColor: ColorsName.bluePastelLight,
                 style: BaseText.blueOceanDeep,
               ),
-              HomeStatusItem(
+              HomeMainStatusItem(
                 title: 'Completed',
                 count: 12,
                 color: ColorsName.greenUltraSoft,
                 borderColor: ColorsName.greenMintSoft,
                 style: BaseText.greenPrimary,
               ),
-              HomeStatusItem(
+              HomeMainStatusItem(
                 title: 'Cancelled',
                 count: 12,
                 color: ColorsName.beigeLight,
@@ -57,8 +57,8 @@ class HomeStatus extends GetView<HomeController> {
   }
 }
 
-class HomeStatusItem extends StatelessWidget {
-  const HomeStatusItem({super.key, required this.title, required this.count, required this.borderColor, required this.color, required this.style});
+class HomeMainStatusItem extends StatelessWidget {
+  const HomeMainStatusItem({super.key, required this.title, required this.count, required this.borderColor, required this.color, required this.style});
   final String title;
   final int count;
   final Color borderColor;

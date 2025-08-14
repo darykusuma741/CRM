@@ -11,8 +11,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
-class HomePipeline extends GetView<HomeController> {
-  const HomePipeline({super.key});
+class HomeMainPipeline extends GetView<HomeController> {
+  const HomeMainPipeline({super.key});
 
   @override
   Widget build(BuildContext context) {

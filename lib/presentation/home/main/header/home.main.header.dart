@@ -1,13 +1,13 @@
 import 'package:crm/common/constants/image_assets.dart';
 import 'package:crm/presentation/home/controllers/home.controller.dart';
-import 'package:crm/presentation/home/header/home.header.profile.dart';
-import 'package:crm/presentation/home/header/home.header.sales_overview.dart';
+import 'package:crm/presentation/home/main/header/home.main.header.profile.dart';
+import 'package:crm/presentation/home/main/header/home.main.header.sales_overview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class HomeHeader extends GetView<HomeController> {
-  const HomeHeader({super.key});
+class HomeMainHeader extends GetView<HomeController> {
+  const HomeMainHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,9 +28,9 @@ class HomeHeader extends GetView<HomeController> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: paddingTop + 16.h),
-              HomeHeaderProfile(),
+              HomeMainHeaderProfile(),
               SizedBox(height: 20.h),
-              HomeHeaderSalesOverview(),
+              HomeMainHeaderSalesOverview(),
             ],
           ),
         ),

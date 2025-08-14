@@ -12,7 +12,6 @@ class HomeBottomNav extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    var _selectedIndex = 0.obs;
     return Obx(() {
       return Container(
         height: 56.h + MediaQuery.of(context).padding.bottom, // tinggi total bottom nav
@@ -33,11 +32,13 @@ class HomeBottomNav extends GetView<HomeController> {
           ],
         ),
         child: BottomNavigationBar(
-          currentIndex: _selectedIndex.value,
-          onTap: (v) => _selectedIndex.value = v,
+          currentIndex: controller.selectedIndexWidget.value,
+          onTap: (v) => controller.selectedIndexWidget.value = v,
           elevation: 0, // matikan shadow bawaan
           backgroundColor: Colors.transparent,
           type: BottomNavigationBarType.fixed,
+          selectedItemColor: ColorsName.blueSteel,
+          unselectedItemColor: ColorsName.graySoftMedium,
           selectedLabelStyle: BaseText.blueSteel.copyWith(fontSize: 11.sp, fontWeight: FontWeight.w500),
           unselectedLabelStyle: BaseText.graySoftMedium.copyWith(fontSize: 11.sp, fontWeight: FontWeight.w300),
           items: [

@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class HomeHeaderProfile extends GetView<HomeController> {
-  const HomeHeaderProfile({super.key});
+class HomeMainHeaderProfile extends GetView<HomeController> {
+  const HomeMainHeaderProfile({super.key});
 
   @override
   Widget build(BuildContext context) {

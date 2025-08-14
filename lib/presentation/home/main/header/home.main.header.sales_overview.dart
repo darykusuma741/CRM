@@ -8,8 +8,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
-class HomeHeaderSalesOverview extends GetView<HomeController> {
-  const HomeHeaderSalesOverview({super.key});
+class HomeMainHeaderSalesOverview extends GetView<HomeController> {
+  const HomeMainHeaderSalesOverview({super.key});
 
   @override
   Widget build(BuildContext context) {

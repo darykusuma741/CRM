@@ -10,8 +10,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
-class HomeGeneralMeeting extends GetView<HomeController> {
-  const HomeGeneralMeeting({super.key});
+class HomeMainGeneralMeeting extends GetView<HomeController> {
+  const HomeMainGeneralMeeting({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,8 +46,8 @@ class HomeGeneralMeeting extends GetView<HomeController> {
               scroll: true,
               items: [1, 2, 3, 4, 5],
               itemBuilder: (context, index) {
-                return HomeGeneralMeetingItem(
-                  stateN: HomeGeneralMeetingState(description: 'Quarterly Business Revieved', date: DateTime.now()),
+                return HomeMainGeneralMeetingItem(
+                  stateN: HomeMainGeneralMeetingState(description: 'Quarterly Business Revieved', date: DateTime.now()),
                 );
               },
             ),
@@ -58,9 +58,9 @@ class HomeGeneralMeeting extends GetView<HomeController> {
   }
 }
 
-class HomeGeneralMeetingItem extends StatelessWidget {
-  const HomeGeneralMeetingItem({super.key, required this.stateN});
-  final HomeGeneralMeetingState stateN;
+class HomeMainGeneralMeetingItem extends StatelessWidget {
+  const HomeMainGeneralMeetingItem({super.key, required this.stateN});
+  final HomeMainGeneralMeetingState stateN;
 
   @override
   Widget build(BuildContext context) {
@@ -123,11 +123,11 @@ class HomeGeneralMeetingItem extends StatelessWidget {
   }
 }
 
-class HomeGeneralMeetingState {
+class HomeMainGeneralMeetingState {
   String description;
   DateTime date;
 
-  HomeGeneralMeetingState({
+  HomeMainGeneralMeetingState({
     required this.description,
     required this.date,
   });
