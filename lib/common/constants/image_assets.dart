@@ -34,6 +34,11 @@ class ImageAssets {
   static final String iconSvgChevronRightGradient = 'assets/images/icon-svg/chevron-right-gradient.svg';
   static final String iconSvgSearch = 'assets/images/icon-svg/search.svg';
   static final String iconSvgStar = 'assets/images/icon-svg/star.svg';
+  static final String iconSvgOther = 'assets/images/icon-svg/other.svg';
+  static final String iconSvgIcon1 = 'assets/images/icon-svg/icon-1.svg';
+  static final String iconSvgIcon2 = 'assets/images/icon-svg/icon-2.svg';
+  static final String iconSvgIcon3 = 'assets/images/icon-svg/icon-3.svg';
+  static final String iconSvgPhone = 'assets/images/icon-svg/phone.svg';
 
   // login
   static final String loginGroup1 = 'assets/images/login-svg/group-1.svg';
@@ -48,6 +53,9 @@ class ImageAssets {
 
   // home svg
   static final String homeBg1Svg = 'assets/images/home-svg/bg-1.svg';
+
+  // leads deatil svg
+  static final String leadsDetailBg1Svg = 'assets/images/leads-detail/bg-1.png';
 
   // home
   static final String homeBg1 = 'assets/images/home/bg-1.png';

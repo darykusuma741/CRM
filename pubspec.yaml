@@ -66,6 +66,7 @@ flutter:
     - assets/images/home-svg/
     - assets/images/home/
     - assets/images/launcher/
+    - assets/images/leads-detail/
 
   fonts:
     - family: Lexend

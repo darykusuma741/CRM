@@ -4,6 +4,7 @@ export 'package:crm/infrastructure/navigation/bindings/controllers/check_in.cont
 export 'package:crm/infrastructure/navigation/bindings/controllers/document_activities.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/face_scan.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/home.controller.binding.dart'; 
+export 'package:crm/infrastructure/navigation/bindings/controllers/leads_detail.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/login.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/meeting_activities.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/sna_form.controller.binding.dart'; 

@@ -10,7 +10,8 @@ class Routes {
   static const FACE_SCAN = '/face-scan';
   static const HOME = '/home';
   static const LOGIN = '/login';
+  static const MEETING_ACTIVITIES = '/meeting-activities';
   static const SNA_FORM = '/sna-form';
   static const SPLASH_SCREEN = '/splash-screen';
-  static const MEETING_ACTIVITIES = '/meeting-activities';
+  static const LEADS_DETAIL = '/leads-detail';
 }

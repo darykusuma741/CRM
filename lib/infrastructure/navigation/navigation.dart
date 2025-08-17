@@ -76,5 +76,10 @@ class Nav {
       page: () => const MeetingActivitiesScreen(),
       binding: MeetingActivitiesControllerBinding(),
     ),
+    GetPage(
+      name: Routes.LEADS_DETAIL,
+      page: () => const LeadsDetailScreen(),
+      binding: LeadsDetailControllerBinding(),
+    ),
   ];
 }

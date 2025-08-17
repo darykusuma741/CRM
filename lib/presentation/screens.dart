@@ -4,6 +4,7 @@ export 'package:crm/presentation/check_in/check_in.screen.dart';
 export 'package:crm/presentation/document_activities/document_activities.screen.dart';
 export 'package:crm/presentation/face_scan/face_scan.screen.dart';
 export 'package:crm/presentation/home/home.screen.dart';
+export 'package:crm/presentation/leads_detail/leads_detail.screen.dart';
 export 'package:crm/presentation/login/login.screen.dart';
 export 'package:crm/presentation/meeting_activities/meeting_activities.screen.dart';
 export 'package:crm/presentation/sna_form/sna_form.screen.dart';

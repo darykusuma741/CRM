@@ -148,4 +148,7 @@ class ColorsName {
   static const Color redPaleSoft = Color(0xFFFFEFF0);
   static const Color redPastel = Color(0xFFFEDCE1);
   static const Color redBright = Color(0xFFFA5B70);
+  static const Color graySteelDark = Color(0xFF47535E);
+  static const Color graySoftPale = Color(0xFFF4F7FA);
+  static const Color blueDeepSeaDark = Color(0xFF0E5C8C);
 }

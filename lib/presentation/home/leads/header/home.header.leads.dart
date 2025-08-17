@@ -14,7 +14,7 @@ class HomeHeaderLeads extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     double paddingTop = MediaQuery.of(context).padding.top;
-    double height = paddingTop + 120.h;
+    double height = paddingTop + 96.h;
 
     return Stack(
       children: [

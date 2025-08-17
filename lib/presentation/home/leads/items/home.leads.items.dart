@@ -3,6 +3,7 @@ import 'package:crm/common/components/custom_rating.dart';
 import 'package:crm/common/constants/base_text.dart';
 import 'package:crm/common/constants/colors_name.dart';
 import 'package:crm/data/model/leads.model.dart';
+import 'package:crm/infrastructure/navigation/routes.dart';
 import 'package:crm/presentation/home/controllers/home.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -33,7 +34,9 @@ class HomeLeadsItem extends StatelessWidget {
   Widget build(BuildContext context) {
     LeadsType type = data.type;
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Get.toNamed(Routes.LEADS_DETAIL, arguments: data);
+      },
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 8.h),
         child: Column(
