@@ -1,7 +1,10 @@
 import 'package:crm/common/components/custom_scaffold.dart';
 import 'package:crm/common/constants/colors_name.dart';
+import 'package:crm/presentation/home/leads/category/home.leads.category.dart';
 import 'package:crm/presentation/home/leads/header/home.header.leads.dart';
+import 'package:crm/presentation/home/leads/items/home.leads.items.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class HomeLeads extends GetView<HomeLeads> {
@@ -16,6 +19,11 @@ class HomeLeads extends GetView<HomeLeads> {
         child: Column(
           children: [
             HomeHeaderLeads(),
+            SizedBox(height: 10.h),
+            HomeLeadsCategory(),
+            SizedBox(height: 14.h),
+            HomeLeadsItems(),
+            SizedBox(height: 20.h),
           ],
         ),
       ),

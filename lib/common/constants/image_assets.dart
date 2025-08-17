@@ -32,6 +32,8 @@ class ImageAssets {
   static final String iconSvgWhatsapp1 = 'assets/images/icon-svg/whatsapp-1.svg';
   static final String iconSvgLocation = 'assets/images/icon-svg/location.svg';
   static final String iconSvgChevronRightGradient = 'assets/images/icon-svg/chevron-right-gradient.svg';
+  static final String iconSvgSearch = 'assets/images/icon-svg/search.svg';
+  static final String iconSvgStar = 'assets/images/icon-svg/star.svg';
 
   // login
   static final String loginGroup1 = 'assets/images/login-svg/group-1.svg';

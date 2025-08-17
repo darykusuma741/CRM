@@ -22,6 +22,9 @@ class CustomTextEditing extends StatelessWidget {
     this.enabled = true,
     this.error,
     this.textArea = false,
+    this.borderRadius,
+    this.borderSide,
+    this.prefixIcon,
   });
   final String? label;
   final String? error;
@@ -34,16 +37,19 @@ class CustomTextEditing extends StatelessWidget {
   final List<TextInputFormatter>? inputFormatters;
   final TextInputType? keyboardType;
   final bool textArea;
+  final BorderRadius? borderRadius;
+  final BorderSide? borderSide;
+  final Widget? prefixIcon;
 
   @override
   Widget build(BuildContext context) {
     final border = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8),
-      borderSide: BorderSide(color: error == null ? ColorsName.grayPearly : ColorsName.redTomato, width: 1.w),
+      borderRadius: borderRadius ?? BorderRadius.circular(8),
+      borderSide: borderSide ?? BorderSide(color: error == null ? ColorsName.grayPearly : ColorsName.redTomato, width: 1.w),
     );
     final focusBorder = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8),
-      borderSide: BorderSide(color: error == null ? ColorsName.blueSteel : ColorsName.redTomato, width: 1.w),
+      borderRadius: borderRadius ?? BorderRadius.circular(8),
+      borderSide: borderSide ?? BorderSide(color: error == null ? ColorsName.blueSteel : ColorsName.redTomato, width: 1.w),
     );
 
     final hintStyle = BaseText.grayMedium.copyWith(fontSize: 13.sp);
@@ -78,6 +84,8 @@ class CustomTextEditing extends StatelessWidget {
                 inputFormatters: inputFormatters,
                 keyboardType: textArea ? TextInputType.multiline : keyboardType,
                 decoration: InputDecoration(
+                  prefixIcon: prefixIcon,
+                  prefixIconConstraints: BoxConstraints(),
                   filled: true,
                   contentPadding: passwordField
                       ? EdgeInsets.only(top: textArea ? 10.h : 0.h, bottom: textArea ? 10.h : 0.h, left: 12.w, right: 32.w)

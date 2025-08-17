@@ -1,4 +1,5 @@
 import 'package:crm/common/components/custom_gradient_text.dart';
+import 'package:crm/common/components/custom_text_editing.dart';
 import 'package:crm/common/constants/base_text.dart';
 import 'package:crm/common/constants/image_assets.dart';
 import 'package:crm/presentation/home/controllers/home.controller.dart';
@@ -29,7 +30,7 @@ class HomeHeaderLeads extends GetView<HomeController> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: paddingTop + 16.h),
+              Expanded(child: Container()),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -55,6 +56,21 @@ class HomeHeaderLeads extends GetView<HomeController> {
                   ),
                 ],
               ),
+              SizedBox(height: 12.h),
+              CustomTextEditing(
+                onChanged: (v) {
+                  controller.searchLeads(v);
+                },
+                hint: 'Search your leads name...',
+                borderRadius: BorderRadius.circular(100.r),
+                borderSide: BorderSide(width: 0.0),
+                prefixIcon: Container(
+                  // color: Colors.amber,
+                  padding: EdgeInsets.only(right: 6.w, left: 12.w, top: 10.h, bottom: 10.h),
+                  child: SvgPicture.asset(ImageAssets.iconSvgSearch, width: 14.w),
+                ),
+              ),
+              SizedBox(height: 14.h),
             ],
           ),
         ),
