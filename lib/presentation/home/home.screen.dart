@@ -2,6 +2,7 @@ import 'package:crm/common/components/custom_scaffold.dart';
 import 'package:crm/presentation/home/bottom_nav/home.bottom_nav.dart';
 import 'package:crm/presentation/home/leads/home.leads.dart';
 import 'package:crm/presentation/home/main/home.main.dart';
+import 'package:crm/presentation/home/profile/home.profile.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -16,7 +17,7 @@ class HomeScreen extends GetView<HomeController> {
       HomeMain(),
       HomeLeads(),
       Container(),
-      Container(),
+      HomeProfile(),
     ];
 
     return Obx(() {

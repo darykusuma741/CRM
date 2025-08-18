@@ -78,7 +78,7 @@ class LeadsDetailHeader extends GetView<LeadsDetailController> {
                   children: [
                     Text(
                       controller.data.value.type.toShortString(),
-                      style: BaseText.greenPrimary.copyWith(
+                      style: (controller.data.value.type == LeadsType.lost ? BaseText.redCherry : BaseText.greenPrimary).copyWith(
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w400,
                       ),

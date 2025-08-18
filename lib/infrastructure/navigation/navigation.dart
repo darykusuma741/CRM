@@ -81,5 +81,35 @@ class Nav {
       page: () => const LeadsDetailScreen(),
       binding: LeadsDetailControllerBinding(),
     ),
+    GetPage(
+      name: Routes.PRODUCT_SERVICE,
+      page: () => const ProductServiceScreen(),
+      binding: ProductServiceControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.FREIGHT_PRODUCT,
+      page: () => const FreightProductScreen(),
+      binding: FreightProductControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.PRODUCT_CATEGORY,
+      page: () => const ProductCategoryScreen(),
+      binding: ProductCategoryControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.CUSTOMER,
+      page: () => const CustomerScreen(),
+      binding: CustomerControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.QUOTATIONS,
+      page: () => const QuotationsScreen(),
+      binding: QuotationsControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.ACTIVITY_HISTORY,
+      page: () => const ActivityHistoryScreen(),
+      binding: ActivityHistoryControllerBinding(),
+    ),
   ];
 }

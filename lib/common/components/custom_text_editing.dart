@@ -25,6 +25,7 @@ class CustomTextEditing extends StatelessWidget {
     this.borderRadius,
     this.borderSide,
     this.prefixIcon,
+    this.fillColor,
   });
   final String? label;
   final String? error;
@@ -40,6 +41,7 @@ class CustomTextEditing extends StatelessWidget {
   final BorderRadius? borderRadius;
   final BorderSide? borderSide;
   final Widget? prefixIcon;
+  final Color? fillColor;
 
   @override
   Widget build(BuildContext context) {
@@ -99,7 +101,7 @@ class CustomTextEditing extends StatelessWidget {
                   focusedBorder: focusBorder,
                   disabledBorder: border,
                   focusedErrorBorder: border,
-                  fillColor: enabled == true ? ColorsName.white : ColorsName.grayWhiteSmoke,
+                  fillColor: enabled == true ? fillColor ?? ColorsName.white : ColorsName.grayWhiteSmoke,
                 ),
               );
             }),

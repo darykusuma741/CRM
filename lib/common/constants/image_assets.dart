@@ -39,6 +39,15 @@ class ImageAssets {
   static final String iconSvgIcon2 = 'assets/images/icon-svg/icon-2.svg';
   static final String iconSvgIcon3 = 'assets/images/icon-svg/icon-3.svg';
   static final String iconSvgPhone = 'assets/images/icon-svg/phone.svg';
+  static final String iconSvgArrowRight = 'assets/images/icon-svg/arrow-right.svg';
+  static final String iconSvgLogout = 'assets/images/icon-svg/logout.svg';
+  static final String iconSvgCustomer = 'assets/images/icon-svg/customer.svg';
+  static final String iconSvgProductServices = 'assets/images/icon-svg/product-services.svg';
+  static final String iconSvgFreightProduct = 'assets/images/icon-svg/freight-product.svg';
+  static final String iconSvgProductCategory = 'assets/images/icon-svg/product-category.svg';
+  static final String iconSvgQuotations = 'assets/images/icon-svg/quotations.svg';
+  static final String iconSvgCustomerLost = 'assets/images/icon-svg/customer-lost.svg';
+  static final String iconSvgActivityHistory = 'assets/images/icon-svg/activity-history.svg';
 
   // login
   static final String loginGroup1 = 'assets/images/login-svg/group-1.svg';
@@ -59,5 +68,6 @@ class ImageAssets {
 
   // home
   static final String homeBg1 = 'assets/images/home/bg-1.png';
+  static final String homeBgProfile = 'assets/images/home/bg-profile.png';
   static final String homeBg2 = 'assets/images/home-svg/bg-2.svg';
 }

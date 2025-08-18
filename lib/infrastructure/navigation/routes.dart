@@ -6,12 +6,18 @@ class Routes {
   static const ADD_LEAD = '/add-lead';
   static const CALL_ACTIVITIES = '/call-activities';
   static const CHECK_IN = '/check-in';
+  static const CUSTOMER = '/customer';
   static const DOCUMENT_ACTIVITIES = '/document-activities';
   static const FACE_SCAN = '/face-scan';
+  static const FREIGHT_PRODUCT = '/freight-product';
   static const HOME = '/home';
+  static const LEADS_DETAIL = '/leads-detail';
   static const LOGIN = '/login';
   static const MEETING_ACTIVITIES = '/meeting-activities';
+  static const PRODUCT_CATEGORY = '/product-category';
+  static const PRODUCT_SERVICE = '/product-service';
+  static const QUOTATIONS = '/quotations';
   static const SNA_FORM = '/sna-form';
   static const SPLASH_SCREEN = '/splash-screen';
-  static const LEADS_DETAIL = '/leads-detail';
+  static const ACTIVITY_HISTORY = '/activity-history';
 }

@@ -1,11 +1,17 @@
+export 'package:crm/infrastructure/navigation/bindings/controllers/activity_history.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/add_lead.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/call_activities.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/check_in.controller.binding.dart'; 
+export 'package:crm/infrastructure/navigation/bindings/controllers/customer.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/document_activities.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/face_scan.controller.binding.dart'; 
+export 'package:crm/infrastructure/navigation/bindings/controllers/freight_product.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/home.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/leads_detail.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/login.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/meeting_activities.controller.binding.dart'; 
+export 'package:crm/infrastructure/navigation/bindings/controllers/product_category.controller.binding.dart'; 
+export 'package:crm/infrastructure/navigation/bindings/controllers/product_service.controller.binding.dart'; 
+export 'package:crm/infrastructure/navigation/bindings/controllers/quotations.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/sna_form.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/splash_screen.controller.binding.dart'; 
