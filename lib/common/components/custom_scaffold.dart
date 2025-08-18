@@ -54,12 +54,13 @@ class CustomScaffold extends StatelessWidget {
 }
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key, required this.title, this.bottom, this.backgroundColor, this.divider = true, this.toolbarHeight});
+  const CustomAppBar({super.key, required this.title, this.actions, this.bottom, this.backgroundColor, this.divider = true, this.toolbarHeight});
   final String title;
   final PreferredSizeWidget? bottom;
   final bool divider;
   final Color? backgroundColor;
   final double? toolbarHeight;
+  final List<Widget>? actions;
 
   @override
   Widget build(BuildContext context) {
@@ -74,6 +75,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         icon: SvgPicture.asset(ImageAssets.iconSvgArrowLeft, width: 16.w, colorFilter: ColorFilter.mode(ColorsName.grayCharcoal, BlendMode.srcIn)),
         onPressed: () => Navigator.pop(context),
       ),
+      actions: actions,
       bottom: bottom ??
           PreferredSize(
             preferredSize: Size.fromHeight(divider ? 0.5.h : 0.0), // Ketebalan border

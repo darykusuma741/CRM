@@ -111,5 +111,10 @@ class Nav {
       page: () => const ActivityHistoryScreen(),
       binding: ActivityHistoryControllerBinding(),
     ),
+    GetPage(
+      name: Routes.FREIGHT_PRODUCT_DETAIL,
+      page: () => const FreightProductDetailScreen(),
+      binding: FreightProductDetailControllerBinding(),
+    ),
   ];
 }

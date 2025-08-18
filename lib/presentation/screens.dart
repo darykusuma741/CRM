@@ -6,6 +6,7 @@ export 'package:crm/presentation/customer/customer.screen.dart';
 export 'package:crm/presentation/document_activities/document_activities.screen.dart';
 export 'package:crm/presentation/face_scan/face_scan.screen.dart';
 export 'package:crm/presentation/freight_product/freight_product.screen.dart';
+export 'package:crm/presentation/freight_product_detail/freight_product_detail.screen.dart';
 export 'package:crm/presentation/home/home.screen.dart';
 export 'package:crm/presentation/leads_detail/leads_detail.screen.dart';
 export 'package:crm/presentation/login/login.screen.dart';

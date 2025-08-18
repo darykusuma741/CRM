@@ -6,6 +6,7 @@ export 'package:crm/infrastructure/navigation/bindings/controllers/customer.cont
 export 'package:crm/infrastructure/navigation/bindings/controllers/document_activities.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/face_scan.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/freight_product.controller.binding.dart'; 
+export 'package:crm/infrastructure/navigation/bindings/controllers/freight_product_detail.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/home.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/leads_detail.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/login.controller.binding.dart'; 

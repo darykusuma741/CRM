@@ -3,6 +3,7 @@ class Routes {
     return SPLASH_SCREEN;
   }
 
+  static const ACTIVITY_HISTORY = '/activity-history';
   static const ADD_LEAD = '/add-lead';
   static const CALL_ACTIVITIES = '/call-activities';
   static const CHECK_IN = '/check-in';
@@ -19,5 +20,5 @@ class Routes {
   static const QUOTATIONS = '/quotations';
   static const SNA_FORM = '/sna-form';
   static const SPLASH_SCREEN = '/splash-screen';
-  static const ACTIVITY_HISTORY = '/activity-history';
+  static const FREIGHT_PRODUCT_DETAIL = '/freight-product-detail';
 }

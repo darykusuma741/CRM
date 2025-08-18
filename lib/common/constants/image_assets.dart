@@ -48,6 +48,9 @@ class ImageAssets {
   static final String iconSvgQuotations = 'assets/images/icon-svg/quotations.svg';
   static final String iconSvgCustomerLost = 'assets/images/icon-svg/customer-lost.svg';
   static final String iconSvgActivityHistory = 'assets/images/icon-svg/activity-history.svg';
+  static final String iconSvgChevron = 'assets/images/icon-svg/chevron.svg';
+  static final String iconSvgPhotoNull = 'assets/images/icon-svg/photo-null.svg';
+  static final String iconSvgEdit = 'assets/images/icon-svg/edit.svg';
 
   // login
   static final String loginGroup1 = 'assets/images/login-svg/group-1.svg';
