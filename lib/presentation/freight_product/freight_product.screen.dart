@@ -1,5 +1,7 @@
+import 'package:crm/common/components/custom_floating_action_container.dart';
 import 'package:crm/common/components/custom_scaffold.dart';
 import 'package:crm/common/constants/colors_name.dart';
+import 'package:crm/infrastructure/navigation/routes.dart';
 import 'package:crm/presentation/freight_product/filter/freight_product.filter.dart';
 import 'package:crm/presentation/freight_product/items/freight_product.items.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +19,9 @@ class FreightProductScreen extends GetView<FreightProductController> {
       appBar: CustomAppBar(
         title: 'Freight Product',
       ),
+      floatingActionButton: CustomFloatingActionContainer(onTap: () {
+        Get.toNamed(Routes.FREIGHT_PRODUCT_FORM);
+      }),
       backgroundColor: ColorsName.white,
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(vertical: 2.h),

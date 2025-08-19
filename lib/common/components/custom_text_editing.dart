@@ -56,7 +56,7 @@ class CustomTextEditing extends StatelessWidget {
 
     final hintStyle = BaseText.grayMedium.copyWith(fontSize: 13.sp);
     final textStyle = (enabled == true ? BaseText.grayIronDark : BaseText.grayMedium).copyWith(fontSize: 13.sp);
-    final labelStyle = BaseText.blueMuted.copyWith(fontSize: 12.sp, fontWeight: FontWeight.w500);
+    final labelStyle = BaseText.blueMuted.copyWith(fontSize: 12.sp, fontWeight: FontWeight.w400);
     final requiredStyle = BaseText.redCherry.copyWith(fontSize: 12.sp);
     final Rx<bool> showPassword = Rx(false);
 

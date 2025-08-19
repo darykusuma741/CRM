@@ -51,6 +51,9 @@ class ImageAssets {
   static final String iconSvgChevron = 'assets/images/icon-svg/chevron.svg';
   static final String iconSvgPhotoNull = 'assets/images/icon-svg/photo-null.svg';
   static final String iconSvgEdit = 'assets/images/icon-svg/edit.svg';
+  static final String iconSvgAdd = 'assets/images/icon-svg/add.svg';
+  static final String iconSvgUpload = 'assets/images/icon-svg/upload.svg';
+  static final String iconSvgdoNotDisturbOn = 'assets/images/icon-svg/do-not-disturb-on.svg';
 
   // login
   static final String loginGroup1 = 'assets/images/login-svg/group-1.svg';

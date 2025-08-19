@@ -14,6 +14,7 @@ class CustomDropdown<T> extends StatefulWidget {
   final String? label; // Label input di atas dropdown
   final String? error; // Pesan error validasi
   final bool showScroll; // Flag (belum digunakan)
+  final bool required; // Flag (belum digunakan)
   final String? iconLeftAsset; // Ikon di sisi kiri input
   final void Function(T value)? onChanged; // Callback ketika item dipilih
 
@@ -27,6 +28,7 @@ class CustomDropdown<T> extends StatefulWidget {
     this.onChanged,
     this.customContent,
     this.showScroll = false,
+    this.required = true,
   });
 
   @override
@@ -214,7 +216,7 @@ class _CustomDropdownState<T> extends State<CustomDropdown<T>> with TickerProvid
             Row(
               children: [
                 Text(widget.label!, style: labelStyle),
-                Text(' *', style: requiredStyle), // Tanda wajib isi
+                if (widget.required) Text(' *', style: requiredStyle),
               ],
             ),
           if (widget.label != null) SizedBox(height: 5.h),

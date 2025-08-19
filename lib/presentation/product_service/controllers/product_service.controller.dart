@@ -30,9 +30,11 @@ class ProductServiceController extends GetxController {
     } else {
       query = query.toLowerCase();
 
-      data.value = data.value.where((lead) {
-        return lead.title.toLowerCase().contains(query!);
-      }).toList();
+      data.value = [
+        ...ctrProductServiceMain.data.value.where((lead) {
+          return lead.title.toLowerCase().contains(query!);
+        })
+      ];
     }
   }
 }

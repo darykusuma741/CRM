@@ -11,6 +11,7 @@ class Routes {
   static const DOCUMENT_ACTIVITIES = '/document-activities';
   static const FACE_SCAN = '/face-scan';
   static const FREIGHT_PRODUCT = '/freight-product';
+  static const FREIGHT_PRODUCT_DETAIL = '/freight-product-detail';
   static const HOME = '/home';
   static const LEADS_DETAIL = '/leads-detail';
   static const LOGIN = '/login';
@@ -20,5 +21,5 @@ class Routes {
   static const QUOTATIONS = '/quotations';
   static const SNA_FORM = '/sna-form';
   static const SPLASH_SCREEN = '/splash-screen';
-  static const FREIGHT_PRODUCT_DETAIL = '/freight-product-detail';
+  static const FREIGHT_PRODUCT_FORM = '/freight-product-form';
 }

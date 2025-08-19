@@ -56,7 +56,7 @@ class MySnackBar {
                   title,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: BaseText.white.copyWith(fontSize: 14.sp, fontWeight: FontWeight.w500),
+                  style: BaseText.white.copyWith(fontSize: 12.sp, fontWeight: FontWeight.w500),
                 ),
                 if (subTitle != null)
                   Text(

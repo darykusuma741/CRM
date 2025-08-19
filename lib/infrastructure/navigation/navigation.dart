@@ -116,5 +116,10 @@ class Nav {
       page: () => const FreightProductDetailScreen(),
       binding: FreightProductDetailControllerBinding(),
     ),
+    GetPage(
+      name: Routes.FREIGHT_PRODUCT_FORM,
+      page: () => const FreightProductFormScreen(),
+      binding: FreightProductFormControllerBinding(),
+    ),
   ];
 }
