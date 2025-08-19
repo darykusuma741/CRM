@@ -1,5 +1,6 @@
 import 'package:crm/controller/freight_product.main.controller.dart';
 import 'package:crm/data/model/freight_product.model.dart';
+import 'package:crm/infrastructure/navigation/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -27,6 +28,9 @@ class FreightProductController extends GetxController {
   }
 
   void getData() {
+    transportBy.value = null;
+    productType.value = null;
+    searchProductCtr.value.text = "";
     ctrFreightProductMain.getData().then((v) {
       data.value = ctrFreightProductMain.data.value;
     });
@@ -60,5 +64,9 @@ class FreightProductController extends GetxController {
   void onApplyProductType(String? value) {
     productType.value = value;
     searchProduct(searchProductCtr.value.text);
+  }
+
+  void onClickItem(FreightProductModel item) async {
+    await Get.toNamed(Routes.FREIGHT_PRODUCT_DETAIL, arguments: item);
   }
 }

@@ -6,6 +6,23 @@ class FreightProductMainController extends GetxController {
   Rx<List<FreightProductModel>> data = Rx([]);
 
   Future getData() async {
-    data.value = FreightProductDummy.data;
+    if (data.value.isEmpty) {
+      data.value = FreightProductDummy.data;
+    }
+  }
+
+  Future createData(FreightProductModel newData) async {
+    data.value = [newData, ...data.value];
+  }
+
+  Future editData(FreightProductModel editData) async {
+    final List<FreightProductModel> existing = [...data.value];
+
+    final int index = existing.indexWhere((e) => e.id == editData.id);
+    if (index >= 0) {
+      existing[index] = editData;
+    }
+    // editData
+    data.value = [...existing];
   }
 }

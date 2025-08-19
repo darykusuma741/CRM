@@ -6,6 +6,6 @@ class ProductServiceMainController extends GetxController {
   Rx<List<ProductServiceModel>> data = Rx([]);
 
   Future getData() async {
-    data.value = ProductServiceDummy.data;
+    data.value = data.value.isEmpty ? ProductServiceDummy.data : data.value;
   }
 }

@@ -9,10 +9,10 @@ class ActivityMainController extends GetxController {
   Rx<List<ActivityModel>> allDataToDo = Rx([]);
 
   Future getData() async {
-    allDataCall.value = ActivityDummy.dataCall;
-    allDataDoc.value = ActivityDummy.dataDocument;
-    allDataMeeting.value = ActivityDummy.dataMeeting;
-    allDataToDo.value = ActivityDummy.dataToDo;
+    allDataCall.value = allDataCall.value.isEmpty ? ActivityDummy.dataCall : allDataCall.value;
+    allDataDoc.value = allDataDoc.value.isEmpty ? ActivityDummy.dataDocument : allDataDoc.value;
+    allDataMeeting.value = allDataMeeting.value.isEmpty ? ActivityDummy.dataMeeting : allDataMeeting.value;
+    allDataToDo.value = allDataToDo.value.isEmpty ? ActivityDummy.dataToDo : allDataToDo.value;
   }
 
   Future<List<ActivityModel>> onDoneDocActivity(ActivityModel item) async {

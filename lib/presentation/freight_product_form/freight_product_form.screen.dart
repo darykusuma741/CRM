@@ -19,7 +19,7 @@ class FreightProductFormScreen extends GetView<FreightProductFormController> {
     return Obx(() {
       return CustomScaffold(
         appBar: CustomAppBar(
-          title: 'Edit Freight Product',
+          title: '${controller.item.value == null ? 'Add' : 'Edit'} Freight Product',
         ),
         backgroundColor: ColorsName.white,
         body: Column(

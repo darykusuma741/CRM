@@ -6,6 +6,6 @@ class LeadsMainController extends GetxController {
   Rx<List<LeadsModel>> data = Rx([]);
 
   Future getData() async {
-    data.value = LeadsDummy.data;
+    data.value = data.value.isEmpty ? LeadsDummy.data : data.value;
   }
 }

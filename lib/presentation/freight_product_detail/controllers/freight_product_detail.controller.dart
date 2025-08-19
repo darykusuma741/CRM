@@ -31,8 +31,11 @@ class FreightProductDetailController extends GetxController {
       width: double.infinity,
       padding: EdgeInsets.symmetric(),
       child: InkWell(
-        onTap: () {
-          Get.toNamed(Routes.FREIGHT_PRODUCT_FORM, arguments: item.value);
+        onTap: () async {
+          final dynamic result = await Get.toNamed(Routes.FREIGHT_PRODUCT_FORM, arguments: item.value);
+          if (result != null) {
+            item.value = result;
+          }
         },
         child: Container(
           height: 34.h,
