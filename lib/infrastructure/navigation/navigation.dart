@@ -121,5 +121,15 @@ class Nav {
       page: () => const FreightProductFormScreen(),
       binding: FreightProductFormControllerBinding(),
     ),
+    GetPage(
+      name: Routes.PRODUCT_CATEGORY_FORM,
+      page: () => const ProductCategoryFormScreen(),
+      binding: ProductCategoryFormControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.PRODUCT_CATEGORY_DETAIL,
+      page: () => const ProductCategoryDetailScreen(),
+      binding: ProductCategoryDetailControllerBinding(),
+    ),
   ];
 }

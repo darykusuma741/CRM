@@ -1,15 +1,15 @@
 import 'package:crm/common/components/custom_modal_bottom.dart';
 import 'package:crm/common/constants/base_text.dart';
 import 'package:crm/common/constants/image_assets.dart';
-import 'package:crm/data/model/freight_product.model.dart';
+import 'package:crm/data/model/product_category.model.dart';
 import 'package:crm/infrastructure/navigation/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
-class FreightProductDetailController extends GetxController {
-  Rx<FreightProductModel> item = Rx(Get.arguments);
+class ProductCategoryDetailController extends GetxController {
+  Rx<ProductCategoryModel> item = Rx(Get.arguments);
 
   @override
   void onInit() {
@@ -34,7 +34,7 @@ class FreightProductDetailController extends GetxController {
         children: [
           InkWell(
             onTap: () async {
-              final dynamic result = await Get.toNamed(Routes.FREIGHT_PRODUCT_FORM, arguments: item.value);
+              final dynamic result = await Get.toNamed(Routes.PRODUCT_CATEGORY_FORM, arguments: item.value);
               if (result != null) {
                 item.value = result;
               }

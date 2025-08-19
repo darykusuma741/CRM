@@ -13,6 +13,8 @@ export 'package:crm/presentation/leads_detail/leads_detail.screen.dart';
 export 'package:crm/presentation/login/login.screen.dart';
 export 'package:crm/presentation/meeting_activities/meeting_activities.screen.dart';
 export 'package:crm/presentation/product_category/product_category.screen.dart';
+export 'package:crm/presentation/product_category_detail/product_category_detail.screen.dart';
+export 'package:crm/presentation/product_category_form/product_category_form.screen.dart';
 export 'package:crm/presentation/product_service/product_service.screen.dart';
 export 'package:crm/presentation/quotations/quotations.screen.dart';
 export 'package:crm/presentation/sna_form/sna_form.screen.dart';

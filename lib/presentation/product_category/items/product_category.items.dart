@@ -33,7 +33,7 @@ class ProductCategoryItemsItem extends GetView<ProductCategoryController> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      // onTap: () => controller.onClickItem(item),
+      onTap: () => controller.onClickItem(item),
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 10.h),
         child: Column(

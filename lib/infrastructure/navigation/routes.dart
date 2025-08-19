@@ -12,14 +12,16 @@ class Routes {
   static const FACE_SCAN = '/face-scan';
   static const FREIGHT_PRODUCT = '/freight-product';
   static const FREIGHT_PRODUCT_DETAIL = '/freight-product-detail';
+  static const FREIGHT_PRODUCT_FORM = '/freight-product-form';
   static const HOME = '/home';
   static const LEADS_DETAIL = '/leads-detail';
   static const LOGIN = '/login';
   static const MEETING_ACTIVITIES = '/meeting-activities';
   static const PRODUCT_CATEGORY = '/product-category';
+  static const PRODUCT_CATEGORY_FORM = '/product-category-form';
   static const PRODUCT_SERVICE = '/product-service';
   static const QUOTATIONS = '/quotations';
   static const SNA_FORM = '/sna-form';
   static const SPLASH_SCREEN = '/splash-screen';
-  static const FREIGHT_PRODUCT_FORM = '/freight-product-form';
+  static const PRODUCT_CATEGORY_DETAIL = '/product-category-detail';
 }

@@ -8,4 +8,19 @@ class ProductCategoryMainController extends GetxController {
   Future getData() async {
     data.value = data.value.isEmpty ? ProductCategoryDummy.data : data.value;
   }
+
+  Future createData(ProductCategoryModel newData) async {
+    data.value = [newData, ...data.value];
+  }
+
+  Future editData(ProductCategoryModel editData) async {
+    final List<ProductCategoryModel> existing = [...data.value];
+
+    final int index = existing.indexWhere((e) => e.id == editData.id);
+    if (index >= 0) {
+      existing[index] = editData;
+    }
+    // editData
+    data.value = [...existing];
+  }
 }
