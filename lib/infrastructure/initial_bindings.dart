@@ -3,6 +3,7 @@ import 'package:crm/common/components/custom_loading/custom_loading.controller.d
 import 'package:crm/controller/activity.main.controller.dart';
 import 'package:crm/controller/freight_product.main.controller.dart';
 import 'package:crm/controller/leads.main.controller.dart';
+import 'package:crm/controller/product_category.main.controller.dart';
 import 'package:crm/controller/product_service.main.controller.dart';
 import 'package:get/get.dart';
 
@@ -15,5 +16,6 @@ class InitialBindings extends Bindings {
     Get.put(FreightProductMainController());
     Get.put(LeadsMainController());
     Get.put(ProductServiceMainController());
+    Get.put(ProductCategoryMainController());
   }
 }
