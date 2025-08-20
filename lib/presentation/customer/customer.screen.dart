@@ -1,6 +1,7 @@
 import 'package:crm/common/components/custom_scaffold.dart';
 import 'package:crm/common/constants/colors_name.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 
@@ -15,10 +16,15 @@ class CustomerScreen extends GetView<CustomerController> {
         title: 'Customer',
       ),
       backgroundColor: ColorsName.white,
-      body: const Center(
-        child: Text(
-          'CustomerScreen is working',
-          style: TextStyle(fontSize: 20),
+      body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(vertical: 2.h),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // FreightProductFilter(),
+            // SizedBox(height: 6.h),
+            // FreightProductItems(),
+          ],
         ),
       ),
     );

@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:crm/common/components/my_snack_bar.dart';
 import 'package:crm/controller/product_category.main.controller.dart';
+import 'package:crm/data/enum/transport_by.dart';
 import 'package:crm/data/model/product_category.model.dart';
 import 'package:crm/presentation/product_category/controllers/product_category.controller.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +35,7 @@ class ProductCategoryFormController extends GetxController {
       item.value = Get.arguments;
       productNameCtr.value.text = item.value!.name;
       descriptionCtr.value.text = item.value!.description ?? '';
-      selectTransportBy.value = item.value!.transportBy == ProductCategoryTrBy.all ? ['Air', 'Ocean'] : [item.value!.transportBy.toShortString()];
+      selectTransportBy.value = item.value!.transportBy == TransportBy.all ? ['Air', 'Ocean'] : [item.value!.transportBy.toShortString()];
     }
     super.onReady();
   }
@@ -66,11 +67,11 @@ class ProductCategoryFormController extends GetxController {
     }
 
     if (!next) return;
-    final ProductCategoryTrBy transportBy = selectTransportBy.value.length == 2
-        ? ProductCategoryTrBy.all
+    final TransportBy transportBy = selectTransportBy.value.length == 2
+        ? TransportBy.all
         : selectTransportBy.value.contains('Ocean')
-            ? ProductCategoryTrBy.ocean
-            : ProductCategoryTrBy.air;
+            ? TransportBy.ocean
+            : TransportBy.air;
 
     if (item.value == null) {
       final newData = ProductCategoryModel(

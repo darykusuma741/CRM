@@ -3,7 +3,7 @@ import 'package:crm/common/components/custom_scaffold.dart';
 import 'package:crm/common/constants/base_text.dart';
 import 'package:crm/common/constants/colors_name.dart';
 import 'package:crm/common/constants/image_assets.dart';
-import 'package:crm/data/model/freight_product.model.dart';
+import 'package:crm/data/enum/transport_by.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';

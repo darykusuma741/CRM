@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:crm/common/components/my_snack_bar.dart';
 import 'package:crm/controller/freight_product.main.controller.dart';
+import 'package:crm/data/enum/transport_by.dart';
 import 'package:crm/data/model/freight_product.model.dart';
 import 'package:crm/presentation/freight_product/controllers/freight_product.controller.dart';
 import 'package:flutter/material.dart';
@@ -36,7 +37,7 @@ class FreightProductFormController extends GetxController {
       productNameCtr.value.text = item.value!.name;
       branch.value = item.value!.branch;
       productType.value = item.value!.type.toShortString();
-      selectTransportBy.value = item.value!.transportBy == FreightProductTrBy.all ? ['Air', 'Ocean'] : [item.value!.transportBy.toShortString()];
+      selectTransportBy.value = item.value!.transportBy == TransportBy.all ? ['Air', 'Ocean'] : [item.value!.transportBy.toShortString()];
       internalReferenceCtr.value.text = item.value!.internalReference ?? '';
     }
     super.onReady();
@@ -70,11 +71,11 @@ class FreightProductFormController extends GetxController {
 
     if (!next) return;
     final FreightProductType type = productType.value == "Service" ? FreightProductType.service : FreightProductType.product;
-    final FreightProductTrBy transportBy = selectTransportBy.value.length == 2
-        ? FreightProductTrBy.all
+    final TransportBy transportBy = selectTransportBy.value.length == 2
+        ? TransportBy.all
         : selectTransportBy.value.contains('Ocean')
-            ? FreightProductTrBy.ocean
-            : FreightProductTrBy.air;
+            ? TransportBy.ocean
+            : TransportBy.air;
 
     if (item.value == null) {
       final newData = FreightProductModel(

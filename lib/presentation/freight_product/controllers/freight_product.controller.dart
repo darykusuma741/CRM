@@ -1,4 +1,5 @@
 import 'package:crm/controller/freight_product.main.controller.dart';
+import 'package:crm/data/enum/transport_by.dart';
 import 'package:crm/data/model/freight_product.model.dart';
 import 'package:crm/infrastructure/navigation/routes.dart';
 import 'package:flutter/material.dart';

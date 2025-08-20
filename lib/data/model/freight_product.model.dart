@@ -1,4 +1,5 @@
 import 'package:crm/common/abstract/base_model.dart';
+import 'package:crm/data/enum/transport_by.dart';
 
 class FreightProductModel extends BaseModel<FreightProductModel> {
   int id;
@@ -6,7 +7,7 @@ class FreightProductModel extends BaseModel<FreightProductModel> {
   String? branch;
   String? internalReference;
   FreightProductType type;
-  FreightProductTrBy transportBy;
+  TransportBy transportBy;
   List<String> productCategory;
   String? photo;
 
@@ -28,7 +29,7 @@ class FreightProductModel extends BaseModel<FreightProductModel> {
     String? branch,
     String? internalReference,
     FreightProductType? type,
-    FreightProductTrBy? transportBy,
+    TransportBy? transportBy,
     List<String>? productCategory,
     String? photo,
   }) {
@@ -46,21 +47,6 @@ class FreightProductModel extends BaseModel<FreightProductModel> {
 }
 
 enum FreightProductType { product, service }
-
-enum FreightProductTrBy { air, ocean, all }
-
-extension FreightProductTrByExtension on FreightProductTrBy {
-  String toShortString() {
-    switch (this) {
-      case FreightProductTrBy.air:
-        return 'Air';
-      case FreightProductTrBy.ocean:
-        return 'Ocean';
-      case FreightProductTrBy.all:
-        return 'Air and Ocean';
-    }
-  }
-}
 
 extension FreightProductTypeExtension on FreightProductType {
   String toShortString() {

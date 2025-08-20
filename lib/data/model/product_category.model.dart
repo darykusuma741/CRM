@@ -1,11 +1,12 @@
 import 'package:crm/common/abstract/base_model.dart';
+import 'package:crm/data/enum/transport_by.dart';
 
 class ProductCategoryModel extends BaseModel<ProductCategoryModel> {
   int id;
   String name;
   String hsCode;
   String? description;
-  ProductCategoryTrBy transportBy;
+  TransportBy transportBy;
 
   ProductCategoryModel({
     required this.id,
@@ -21,7 +22,7 @@ class ProductCategoryModel extends BaseModel<ProductCategoryModel> {
     String? name,
     String? hsCode,
     String? description,
-    ProductCategoryTrBy? transportBy,
+    TransportBy? transportBy,
   }) {
     return ProductCategoryModel(
       id: id ?? this.id,
@@ -30,20 +31,5 @@ class ProductCategoryModel extends BaseModel<ProductCategoryModel> {
       description: description ?? this.description,
       transportBy: transportBy ?? this.transportBy,
     );
-  }
-}
-
-enum ProductCategoryTrBy { air, ocean, all }
-
-extension ProductCategoryTrByExtension on ProductCategoryTrBy {
-  String toShortString() {
-    switch (this) {
-      case ProductCategoryTrBy.air:
-        return 'Air';
-      case ProductCategoryTrBy.ocean:
-        return 'Ocean';
-      case ProductCategoryTrBy.all:
-        return 'Air and Ocean';
-    }
   }
 }

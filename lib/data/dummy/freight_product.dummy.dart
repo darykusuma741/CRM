@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:crm/data/enum/transport_by.dart';
 import 'package:crm/data/model/freight_product.model.dart';
 
 class FreightProductDummy {
@@ -8,7 +9,7 @@ class FreightProductDummy {
       id: Random().nextInt(999999),
       name: 'Office Chair Ergonomic 2025',
       type: FreightProductType.product,
-      transportBy: FreightProductTrBy.ocean,
+      transportBy: TransportBy.ocean,
       productCategory: ['Navigation Equipment'],
       internalReference: 'DMGPS-OC-2025',
       branch: 'Surabaya',
@@ -19,7 +20,7 @@ class FreightProductDummy {
       id: Random().nextInt(999999),
       name: 'Laptop ASUS ZenBook 14',
       type: FreightProductType.product,
-      transportBy: FreightProductTrBy.ocean,
+      transportBy: TransportBy.ocean,
       productCategory: ['Navigation Equipment'],
       internalReference: 'DMGPS-OC-2025',
       branch: 'Depok',
@@ -28,7 +29,7 @@ class FreightProductDummy {
       id: Random().nextInt(999999),
       name: 'Portable Scanner X-Scan Pro',
       type: FreightProductType.product,
-      transportBy: FreightProductTrBy.air,
+      transportBy: TransportBy.air,
       productCategory: ['Navigation Equipment'],
       internalReference: 'DMGPS-OC-2025',
       branch: 'Jakarta',
@@ -37,7 +38,7 @@ class FreightProductDummy {
       id: Random().nextInt(999999),
       name: 'Smart LED Display Panel',
       type: FreightProductType.product,
-      transportBy: FreightProductTrBy.air,
+      transportBy: TransportBy.air,
       productCategory: ['Navigation Equipment'],
       internalReference: 'DMGPS-OC-2025',
       branch: 'Semarang',
@@ -46,7 +47,7 @@ class FreightProductDummy {
       id: Random().nextInt(999999),
       name: 'Freight Insurance Coverage',
       type: FreightProductType.service,
-      transportBy: FreightProductTrBy.air,
+      transportBy: TransportBy.air,
       productCategory: ['Navigation Equipment'],
       internalReference: 'DMGPS-OC-2025',
       branch: 'Bali',
