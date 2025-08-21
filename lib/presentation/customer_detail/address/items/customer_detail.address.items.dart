@@ -1,6 +1,8 @@
+import 'package:crm/common/components/custom_modal_bottom.dart';
 import 'package:crm/common/constants/base_text.dart';
 import 'package:crm/common/constants/colors_name.dart';
 import 'package:crm/data/enum/address_type.dart';
+import 'package:crm/presentation/customer_detail/address/detail/customer_detail.address.detail.dart';
 import 'package:crm/presentation/customer_detail/controllers/customer_detail.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -17,7 +19,9 @@ class CustomerDetailAddressItems extends GetView<CustomerDetailController> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: item.additionalAddress.map((e) {
           return InkWell(
-            onTap: () {},
+            onTap: () {
+              customModalBottom(CustomerDetailAddressDetail(e));
+            },
             borderRadius: BorderRadius.circular(6.r),
             child: Ink(
               width: double.infinity,
