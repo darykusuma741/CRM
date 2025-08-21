@@ -1,5 +1,6 @@
 import 'package:crm/controller/customer.main.controller.dart';
 import 'package:crm/data/model/customer.model.dart';
+import 'package:crm/infrastructure/navigation/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -8,6 +9,9 @@ class CustomerController extends GetxController {
   Rx<List<CustomerModel>> data = Rx([]);
   Rx<TextEditingController> searchCustomerCtr = Rx(TextEditingController());
   Rxn<CustomerDetailType?> detailType = Rxn();
+  Rx<int> countAll = Rx(0);
+  Rx<int> countCompany = Rx(0);
+  Rx<int> countIndividual = Rx(0);
 
   @override
   void onInit() {
@@ -29,6 +33,9 @@ class CustomerController extends GetxController {
     searchCustomerCtr.value.text = "";
     ctrCustomerMain.getData().then((v) {
       data.value = ctrCustomerMain.data.value;
+      countAll.value = data.value.length;
+      countCompany.value = data.value.where((e) => e.detailType.isCompany).toList().length;
+      countIndividual.value = data.value.where((e) => e.detailType.isIndividual).toList().length;
     });
   }
 
@@ -52,5 +59,7 @@ class CustomerController extends GetxController {
     }).toList();
   }
 
-  void onClickItem(CustomerModel item) {}
+  void onClickItem(CustomerModel item) {
+    Get.toNamed(Routes.CUSTOMER_DETAIL, arguments: item);
+  }
 }

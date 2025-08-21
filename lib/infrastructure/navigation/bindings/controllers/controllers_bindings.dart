@@ -3,6 +3,7 @@ export 'package:crm/infrastructure/navigation/bindings/controllers/add_lead.cont
 export 'package:crm/infrastructure/navigation/bindings/controllers/call_activities.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/check_in.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/customer.controller.binding.dart'; 
+export 'package:crm/infrastructure/navigation/bindings/controllers/customer_detail.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/document_activities.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/face_scan.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/freight_product.controller.binding.dart'; 

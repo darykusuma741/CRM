@@ -18,10 +18,11 @@ class Routes {
   static const LOGIN = '/login';
   static const MEETING_ACTIVITIES = '/meeting-activities';
   static const PRODUCT_CATEGORY = '/product-category';
+  static const PRODUCT_CATEGORY_DETAIL = '/product-category-detail';
   static const PRODUCT_CATEGORY_FORM = '/product-category-form';
   static const PRODUCT_SERVICE = '/product-service';
   static const QUOTATIONS = '/quotations';
   static const SNA_FORM = '/sna-form';
   static const SPLASH_SCREEN = '/splash-screen';
-  static const PRODUCT_CATEGORY_DETAIL = '/product-category-detail';
+  static const CUSTOMER_DETAIL = '/customer-detail';
 }

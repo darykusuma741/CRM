@@ -131,5 +131,10 @@ class Nav {
       page: () => const ProductCategoryDetailScreen(),
       binding: ProductCategoryDetailControllerBinding(),
     ),
+    GetPage(
+      name: Routes.CUSTOMER_DETAIL,
+      page: () => const CustomerDetailScreen(),
+      binding: CustomerDetailControllerBinding(),
+    ),
   ];
 }

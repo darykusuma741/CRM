@@ -45,9 +45,10 @@ class CustomerFilter extends GetView<CustomerController> {
               controller.searchCustomer(controller.searchCustomerCtr.value.text);
             },
             items: [
-              CustomSelectCategoryState<CustomerDetailType?>(count: 2, label: 'All', value: null),
-              CustomSelectCategoryState<CustomerDetailType?>(count: 2, label: 'Company', value: CustomerDetailType.company),
-              CustomSelectCategoryState<CustomerDetailType?>(count: 2, label: 'Individual', value: CustomerDetailType.individual),
+              CustomSelectCategoryState<CustomerDetailType?>(count: controller.countAll.value, label: 'All', value: null),
+              CustomSelectCategoryState<CustomerDetailType?>(count: controller.countCompany.value, label: 'Company', value: CustomerDetailType.company),
+              CustomSelectCategoryState<CustomerDetailType?>(
+                  count: controller.countIndividual.value, label: 'Individual', value: CustomerDetailType.individual),
             ],
           ),
         ],
