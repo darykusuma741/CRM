@@ -11,7 +11,7 @@ class CustomerDetailAddressButtonAdd extends GetView<CustomerDetailController> {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: controller.onClickAddAddress,
       borderRadius: BorderRadius.circular(6.r),
       child: Ink(
         width: double.infinity,

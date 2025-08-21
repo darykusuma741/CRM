@@ -9,4 +9,15 @@ extension TitleTypeExtension on TitleType {
         return 'Mr.';
     }
   }
+
+  static TitleType fromString(String value) {
+    switch (value) {
+      case 'Ms.':
+        return TitleType.ms;
+      case 'Mr.':
+        return TitleType.mr;
+      default:
+        throw ArgumentError('Unknown TitleType: $value');
+    }
+  }
 }

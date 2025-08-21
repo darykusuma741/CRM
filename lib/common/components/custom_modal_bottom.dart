@@ -3,24 +3,33 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:crm/common/constants/colors_name.dart';
 
-void customModalBottom<T>(Widget child) {
-  showModalBottomSheet(
+Future<T?> customModalBottom<T>(Widget child) async {
+  return await showModalBottomSheet<T>(
       context: Get.context!,
+      constraints: BoxConstraints(maxHeight: MediaQuery.of(Get.context!).size.height - MediaQuery.of(Get.context!).padding.top - 30.h),
       builder: (context) {
-        return SingleChildScrollView(
-          child: Column(
-            children: [
-              SizedBox(height: 12.h),
-              Container(
-                width: 32.w,
-                height: 4.0,
-                decoration: BoxDecoration(color: ColorsName.graySilver, borderRadius: BorderRadius.circular(4.r)),
+        return Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            SizedBox(height: 12.h),
+            Container(
+              width: 32.w,
+              height: 4.0,
+              decoration: BoxDecoration(color: ColorsName.graySilver, borderRadius: BorderRadius.circular(4.r)),
+            ),
+            SizedBox(height: 16.h),
+            Flexible(
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    child,
+                    SizedBox(height: MediaQuery.of(context).padding.bottom),
+                  ],
+                ),
               ),
-              SizedBox(height: 16.h),
-              child,
-              SizedBox(height: MediaQuery.of(context).padding.bottom),
-            ],
-          ),
+            ),
+          ],
         );
       },
       enableDrag: true,

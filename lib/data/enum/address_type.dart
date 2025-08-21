@@ -13,4 +13,19 @@ extension AddressTypeExtension on AddressType {
         return 'Other Address';
     }
   }
+
+  static AddressType fromString(String value) {
+    switch (value) {
+      case 'Contact':
+        return AddressType.contact;
+      case 'Delivery Address':
+        return AddressType.deliveryAddress;
+      case 'Invoice Address':
+        return AddressType.invoiceAddress;
+      case 'Other Address':
+        return AddressType.otherAddress;
+      default:
+        throw ArgumentError('Unknown AddressType: $value');
+    }
+  }
 }

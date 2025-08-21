@@ -17,6 +17,7 @@ class CustomerDetailAddressItems extends GetView<CustomerDetailController> {
       final item = controller.item.value;
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        spacing: 8.h,
         children: item.additionalAddress.map((e) {
           return InkWell(
             onTap: () {

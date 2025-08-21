@@ -9,6 +9,11 @@ class AdditionalAddressModel extends BaseModel<AdditionalAddressModel> {
   String contactName;
   String? jobPosition;
   String? email;
+  String? city;
+  String? state;
+  String? country;
+  String? streetAddress;
+  String? postalCode;
   String phoneNumber;
 
   AdditionalAddressModel({
@@ -18,6 +23,11 @@ class AdditionalAddressModel extends BaseModel<AdditionalAddressModel> {
     required this.contactName,
     this.jobPosition,
     this.email,
+    this.city,
+    this.state,
+    this.country,
+    this.streetAddress,
+    this.postalCode,
     required this.phoneNumber,
   });
 
@@ -29,6 +39,11 @@ class AdditionalAddressModel extends BaseModel<AdditionalAddressModel> {
     String? contactName,
     String? jobPosition,
     String? email,
+    String? city,
+    String? state,
+    String? country,
+    String? streetAddress,
+    String? postalCode,
     String? phoneNumber,
   }) {
     return AdditionalAddressModel(
@@ -38,6 +53,11 @@ class AdditionalAddressModel extends BaseModel<AdditionalAddressModel> {
       contactName: contactName ?? this.contactName,
       jobPosition: jobPosition ?? this.jobPosition,
       email: email ?? this.email,
+      state: state ?? this.state,
+      city: city ?? this.city,
+      country: country ?? this.country,
+      streetAddress: streetAddress ?? this.streetAddress,
+      postalCode: postalCode ?? this.postalCode,
       phoneNumber: phoneNumber ?? this.phoneNumber,
     );
   }

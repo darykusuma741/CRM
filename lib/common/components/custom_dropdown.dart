@@ -128,7 +128,8 @@ class _CustomDropdownState<T> extends State<CustomDropdown<T>> with TickerProvid
             child: CompositedTransformFollower(
               link: _layerLink,
               showWhenUnlinked: false,
-              offset: Offset(0, canShowBelow ? size.height : (-dropdownMaxHeight + 48.0)),
+              // offset: Offset(0, canShowBelow ? size.height : (-dropdownMaxHeight + 100.0)),
+              offset: Offset(0, size.height),
               child: FadeTransition(
                 opacity: _fadeAnimation,
                 child: SlideTransition(

@@ -136,5 +136,10 @@ class Nav {
       page: () => const CustomerDetailScreen(),
       binding: CustomerDetailControllerBinding(),
     ),
+    GetPage(
+      name: Routes.ADDRESS_FORM,
+      page: () => const AddressFormScreen(),
+      binding: AddressFormControllerBinding(),
+    ),
   ];
 }

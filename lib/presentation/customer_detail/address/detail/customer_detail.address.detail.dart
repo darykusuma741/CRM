@@ -74,7 +74,7 @@ class CustomerDetailAddressDetail extends GetView<CustomerDetailController> {
           ),
           SizedBox(height: 16.h),
           CustomButton(
-            onTap: () {},
+            onTap: () => controller.onClickEditAddress(item),
             title: 'Edit',
             bgColor: ColorsName.blueDeep,
           ),
