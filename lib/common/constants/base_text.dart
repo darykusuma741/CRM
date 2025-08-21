@@ -150,6 +150,9 @@ class BaseText {
   static TextStyle graySoftPale = textStyle.copyWith(color: ColorsName.graySoftPale);
   static TextStyle blueDeepSeaDark = textStyle.copyWith(color: ColorsName.blueDeepSeaDark);
   static TextStyle grayCloudy = textStyle.copyWith(color: ColorsName.grayCloudy);
+  static TextStyle blueExtraLight = textStyle.copyWith(color: ColorsName.blueExtraLight);
+  static TextStyle bluePaleSoft = textStyle.copyWith(color: ColorsName.bluePaleSoft);
+  static TextStyle blueBrightSky = textStyle.copyWith(color: ColorsName.blueBrightSky);
 
   static FontWeight light = FontWeight.w300;
   static FontWeight regular = FontWeight.w400;

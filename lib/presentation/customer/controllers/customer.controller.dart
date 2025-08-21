@@ -1,9 +1,13 @@
+import 'package:crm/controller/customer.main.controller.dart';
+import 'package:crm/data/model/customer.model.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CustomerController extends GetxController {
-  //TODO: Implement CustomerController
+  CustomerMainController ctrCustomerMain = Get.put(CustomerMainController());
+  Rx<List<CustomerModel>> data = Rx([]);
+  Rx<TextEditingController> searchCustomerCtr = Rx(TextEditingController());
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -11,6 +15,7 @@ class CustomerController extends GetxController {
 
   @override
   void onReady() {
+    getData();
     super.onReady();
   }
 
@@ -19,5 +24,12 @@ class CustomerController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
+  void getData() {
+    searchCustomerCtr.value.text = "";
+    ctrCustomerMain.getData().then((v) {
+      data.value = ctrCustomerMain.data.value;
+    });
+  }
+
+  void onClickItem(CustomerModel item) {}
 }

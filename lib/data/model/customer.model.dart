@@ -49,3 +49,17 @@ class CustomerModel extends BaseModel<CustomerModel> {
 enum CustomerType { personal, broker }
 
 enum CustomerDetailType { company, individual }
+
+extension FreightProductTypeExtension on CustomerDetailType {
+  String toShortString() {
+    switch (this) {
+      case CustomerDetailType.company:
+        return 'Company';
+      case CustomerDetailType.individual:
+        return 'Individual';
+    }
+  }
+
+  bool get isCompany => this == CustomerDetailType.company;
+  bool get isIndividual => this == CustomerDetailType.individual;
+}

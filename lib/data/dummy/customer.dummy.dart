@@ -29,7 +29,7 @@ class CustomerDummy {
       transportBy: TransportBy.ocean,
       productCategory: [],
       detailType: CustomerDetailType.individual,
-      companyName: 'Takasya Namaya',
+      customerName: 'Takasya Namaya',
       email: 'takasya@amansentosa.com',
     ),
     CustomerModel(
@@ -38,7 +38,7 @@ class CustomerDummy {
       transportBy: TransportBy.ocean,
       productCategory: [],
       detailType: CustomerDetailType.individual,
-      companyName: 'Budi Setia Utomo',
+      customerName: 'Budi Setia Utomo',
       email: 'budiutomo@sinarutamajaya.com',
     ),
     CustomerModel(
