@@ -1,6 +1,7 @@
 import 'package:crm/common/abstract/base_model.dart';
 import 'package:crm/data/enum/transport_by.dart';
 import 'package:crm/data/model/additional_address.model.dart';
+import 'package:crm/data/model/marking.model.dart';
 
 class CustomerModel extends BaseModel<CustomerModel> {
   int id;
@@ -16,6 +17,7 @@ class CustomerModel extends BaseModel<CustomerModel> {
   List<String> productCategory;
   CustomerDetailType detailType;
   List<AdditionalAddressModel> additionalAddress;
+  List<MarkingModel> markings;
 
   CustomerModel({
     required this.id,
@@ -31,6 +33,7 @@ class CustomerModel extends BaseModel<CustomerModel> {
     required this.productCategory,
     required this.detailType,
     required this.additionalAddress,
+    required this.markings,
   });
 
   @override
@@ -48,6 +51,7 @@ class CustomerModel extends BaseModel<CustomerModel> {
     List<String>? productCategory,
     CustomerDetailType? detailType,
     List<AdditionalAddressModel>? additionalAddress,
+    List<MarkingModel>? markings,
   }) {
     return CustomerModel(
       id: id ?? this.id,
@@ -63,6 +67,7 @@ class CustomerModel extends BaseModel<CustomerModel> {
       productCategory: productCategory ?? this.productCategory,
       detailType: detailType ?? this.detailType,
       additionalAddress: additionalAddress ?? this.additionalAddress,
+      markings: markings ?? this.markings,
     );
   }
 }

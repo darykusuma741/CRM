@@ -13,6 +13,7 @@ export 'package:crm/infrastructure/navigation/bindings/controllers/freight_produ
 export 'package:crm/infrastructure/navigation/bindings/controllers/home.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/leads_detail.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/login.controller.binding.dart'; 
+export 'package:crm/infrastructure/navigation/bindings/controllers/marking_detail.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/meeting_activities.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/product_category.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/product_category_detail.controller.binding.dart'; 

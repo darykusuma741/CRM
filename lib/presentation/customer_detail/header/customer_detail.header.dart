@@ -1,6 +1,7 @@
 import 'package:crm/common/constants/base_text.dart';
 import 'package:crm/common/constants/colors_name.dart';
 import 'package:crm/data/model/customer.model.dart';
+import 'package:crm/infrastructure/navigation/routes.dart';
 import 'package:crm/presentation/customer_detail/controllers/customer_detail.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -34,8 +35,18 @@ class CustomerDetailHeader extends GetView<CustomerDetailController> {
             Row(
               spacing: 10.w,
               children: [
-                CustomerDetailHeaderMQ(label: 'Marking', count: 0),
-                CustomerDetailHeaderMQ(label: 'Quotation', count: 0),
+                CustomerDetailHeaderMQ(
+                  label: 'Marking',
+                  count: item.markings.length,
+                  onTap: () {
+                    Get.toNamed(Routes.MARKING_DETAIL, arguments: item.markings);
+                  },
+                ),
+                CustomerDetailHeaderMQ(
+                  label: 'Quotation',
+                  count: 0,
+                  onTap: () {},
+                ),
               ],
             ),
             SizedBox(height: 16.h),
@@ -47,27 +58,32 @@ class CustomerDetailHeader extends GetView<CustomerDetailController> {
 }
 
 class CustomerDetailHeaderMQ extends StatelessWidget {
-  const CustomerDetailHeaderMQ({super.key, required this.label, required this.count});
+  const CustomerDetailHeaderMQ({super.key, required this.label, required this.count, required this.onTap});
   final String label;
   final int count;
+  final void Function() onTap;
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Container(
-        height: 34.h,
-        decoration: BoxDecoration(
-          color: ColorsName.greenUltraSoft,
-          borderRadius: BorderRadius.circular(4.r),
-          border: Border.all(color: ColorsName.greenMintSoft),
-        ),
-        padding: EdgeInsets.symmetric(horizontal: 10.w),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(label, style: BaseText.greenPrimary.copyWith(fontSize: 11.sp)),
-            Text(count.toString(), style: BaseText.greenPrimary.copyWith(fontSize: 11.sp)),
-          ],
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(4.r),
+        child: Ink(
+          height: 34.h,
+          decoration: BoxDecoration(
+            color: ColorsName.greenUltraSoft,
+            borderRadius: BorderRadius.circular(4.r),
+            border: Border.all(color: ColorsName.greenMintSoft),
+          ),
+          padding: EdgeInsets.symmetric(horizontal: 10.w),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(label, style: BaseText.greenPrimary.copyWith(fontSize: 11.sp)),
+              Text(count.toString(), style: BaseText.greenPrimary.copyWith(fontSize: 11.sp)),
+            ],
+          ),
         ),
       ),
     );

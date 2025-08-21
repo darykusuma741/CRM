@@ -13,6 +13,7 @@ export 'package:crm/presentation/freight_product_form/freight_product_form.scree
 export 'package:crm/presentation/home/home.screen.dart';
 export 'package:crm/presentation/leads_detail/leads_detail.screen.dart';
 export 'package:crm/presentation/login/login.screen.dart';
+export 'package:crm/presentation/marking_detail/marking_detail.screen.dart';
 export 'package:crm/presentation/meeting_activities/meeting_activities.screen.dart';
 export 'package:crm/presentation/product_category/product_category.screen.dart';
 export 'package:crm/presentation/product_category_detail/product_category_detail.screen.dart';

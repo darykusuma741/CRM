@@ -4,6 +4,7 @@ class Routes {
   }
 
   static const ACTIVITY_HISTORY = '/activity-history';
+  static const ADDRESS_FORM = '/address-form';
   static const ADD_LEAD = '/add-lead';
   static const CALL_ACTIVITIES = '/call-activities';
   static const CHECK_IN = '/check-in';
@@ -25,5 +26,5 @@ class Routes {
   static const QUOTATIONS = '/quotations';
   static const SNA_FORM = '/sna-form';
   static const SPLASH_SCREEN = '/splash-screen';
-  static const ADDRESS_FORM = '/address-form';
+  static const MARKING_DETAIL = '/marking-detail';
 }

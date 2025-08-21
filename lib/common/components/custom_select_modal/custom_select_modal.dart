@@ -13,6 +13,7 @@ class CustomSelectModal<T> extends StatelessWidget {
     required this.items,
     this.title,
     this.padding,
+    this.margin,
     required this.value,
     required this.hint,
     required this.valueText,
@@ -25,13 +26,14 @@ class CustomSelectModal<T> extends StatelessWidget {
   final String? title;
   final EdgeInsetsGeometry? padding;
   final void Function(T? v) onChange;
+  final EdgeInsetsGeometry? margin;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 16.h),
+      margin: margin ?? EdgeInsets.only(top: 16.h),
       padding: padding ?? EdgeInsets.symmetric(),
-      child: GestureDetector(
+      child: InkWell(
         onTap: () => customModalBottom<T>(CustomSelectModalCustomModal<T>(
           valueText: valueText,
           valueData: value,
@@ -39,7 +41,8 @@ class CustomSelectModal<T> extends StatelessWidget {
           title: title,
           onChange: onChange,
         )),
-        child: Container(
+        borderRadius: BorderRadius.circular(100.r),
+        child: Ink(
           padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 6.h),
           decoration: BoxDecoration(
             color: ColorsName.grayFaint,

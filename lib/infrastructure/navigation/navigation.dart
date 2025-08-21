@@ -141,5 +141,10 @@ class Nav {
       page: () => const AddressFormScreen(),
       binding: AddressFormControllerBinding(),
     ),
+    GetPage(
+      name: Routes.MARKING_DETAIL,
+      page: () => const MarkingDetailScreen(),
+      binding: MarkingDetailControllerBinding(),
+    ),
   ];
 }
