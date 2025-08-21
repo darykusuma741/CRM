@@ -5,7 +5,11 @@ class CustomerModel extends BaseModel<CustomerModel> {
   int id;
   String? companyName;
   String? customerName;
+  String? phoneNumber;
   String? email;
+  String? address;
+  String? nik;
+  String? npwp;
   CustomerType customerType;
   TransportBy transportBy;
   List<String> productCategory;
@@ -15,7 +19,11 @@ class CustomerModel extends BaseModel<CustomerModel> {
     required this.id,
     this.companyName,
     this.customerName,
+    this.phoneNumber,
     this.email,
+    this.address,
+    this.nik,
+    this.npwp,
     required this.customerType,
     required this.transportBy,
     required this.productCategory,
@@ -27,7 +35,11 @@ class CustomerModel extends BaseModel<CustomerModel> {
     int? id,
     String? companyName,
     String? customerName,
+    String? phoneNumber,
     String? email,
+    String? address,
+    String? nik,
+    String? npwp,
     CustomerType? customerType,
     TransportBy? transportBy,
     List<String>? productCategory,
@@ -37,7 +49,11 @@ class CustomerModel extends BaseModel<CustomerModel> {
       id: id ?? this.id,
       companyName: companyName ?? this.companyName,
       customerName: customerName ?? this.customerName,
+      phoneNumber: phoneNumber ?? this.phoneNumber,
       email: email ?? this.email,
+      address: address ?? this.address,
+      nik: nik ?? this.nik,
+      npwp: npwp ?? this.npwp,
       customerType: customerType ?? this.customerType,
       transportBy: transportBy ?? this.transportBy,
       productCategory: productCategory ?? this.productCategory,
@@ -62,4 +78,18 @@ extension FreightProductTypeExtension on CustomerDetailType {
 
   bool get isCompany => this == CustomerDetailType.company;
   bool get isIndividual => this == CustomerDetailType.individual;
+}
+
+extension CustomerTypeExtension on CustomerType {
+  String toShortString() {
+    switch (this) {
+      case CustomerType.broker:
+        return 'Broker';
+      case CustomerType.personal:
+        return 'Personal';
+    }
+  }
+
+  bool get isBroker => this == CustomerType.broker;
+  bool get isPersonal => this == CustomerType.personal;
 }

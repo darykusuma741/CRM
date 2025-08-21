@@ -54,6 +54,7 @@ class ImageAssets {
   static final String iconSvgAdd = 'assets/images/icon-svg/add.svg';
   static final String iconSvgUpload = 'assets/images/icon-svg/upload.svg';
   static final String iconSvgdoNotDisturbOn = 'assets/images/icon-svg/do-not-disturb-on.svg';
+  static final String iconSvgPdf = 'assets/images/icon-svg/pdf.svg';
 
   // login
   static final String loginGroup1 = 'assets/images/login-svg/group-1.svg';
