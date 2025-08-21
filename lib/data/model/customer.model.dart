@@ -1,5 +1,6 @@
 import 'package:crm/common/abstract/base_model.dart';
 import 'package:crm/data/enum/transport_by.dart';
+import 'package:crm/data/model/additional_address.model.dart';
 
 class CustomerModel extends BaseModel<CustomerModel> {
   int id;
@@ -14,6 +15,7 @@ class CustomerModel extends BaseModel<CustomerModel> {
   TransportBy transportBy;
   List<String> productCategory;
   CustomerDetailType detailType;
+  List<AdditionalAddressModel> additionalAddress;
 
   CustomerModel({
     required this.id,
@@ -28,6 +30,7 @@ class CustomerModel extends BaseModel<CustomerModel> {
     required this.transportBy,
     required this.productCategory,
     required this.detailType,
+    required this.additionalAddress,
   });
 
   @override
@@ -44,6 +47,7 @@ class CustomerModel extends BaseModel<CustomerModel> {
     TransportBy? transportBy,
     List<String>? productCategory,
     CustomerDetailType? detailType,
+    List<AdditionalAddressModel>? additionalAddress,
   }) {
     return CustomerModel(
       id: id ?? this.id,
@@ -58,6 +62,7 @@ class CustomerModel extends BaseModel<CustomerModel> {
       transportBy: transportBy ?? this.transportBy,
       productCategory: productCategory ?? this.productCategory,
       detailType: detailType ?? this.detailType,
+      additionalAddress: additionalAddress ?? this.additionalAddress,
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:crm/common/components/custom_scaffold.dart';
 import 'package:crm/common/constants/colors_name.dart';
+import 'package:crm/presentation/customer_detail/address/customer_detail.address.dart';
 import 'package:crm/presentation/customer_detail/header/customer_detail.header.dart';
 import 'package:crm/presentation/customer_detail/information/customer_detail.information.dart';
 import 'package:crm/presentation/customer_detail/tab_bar/customer_detail.tab_bar.dart';
@@ -35,10 +36,9 @@ class CustomerDetailScreen extends GetView<CustomerDetailController> {
             ),
             Expanded(
               child: TabBarView(
-                physics: NeverScrollableScrollPhysics(),
                 children: [
                   CustomerDetailInformation(),
-                  Container(),
+                  CustomerDetailAddress(),
                 ],
               ),
             ),

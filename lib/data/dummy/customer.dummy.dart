@@ -1,6 +1,9 @@
 import 'dart:math';
 
+import 'package:crm/data/enum/address_type.dart';
+import 'package:crm/data/enum/title_type.dart';
 import 'package:crm/data/enum/transport_by.dart';
+import 'package:crm/data/model/additional_address.model.dart';
 import 'package:crm/data/model/customer.model.dart';
 
 class CustomerDummy {
@@ -16,6 +19,15 @@ class CustomerDummy {
       address: 'Jl. S. Parman, Soho Podomoro no 26, Jakarta Barat, DKI Jakarta, Indonesia 441142',
       nik: '3175091234560003',
       npwp: '12.345.678.9-012.345',
+      additionalAddress: [
+        AdditionalAddressModel(
+          id: Random().nextInt(999999),
+          addressType: AddressType.contact,
+          title: TitleType.mr,
+          contactName: 'Dary Kusuma',
+          phoneNumber: '082398283892',
+        ),
+      ],
       email: 'halo@nusantaraglobaltech.co.id',
     ),
     CustomerModel(
@@ -29,6 +41,7 @@ class CustomerDummy {
       address: 'Jl. S. Parman, Soho Podomoro no 26, Jakarta Barat, DKI Jakarta, Indonesia 441142',
       nik: '3175091234560003',
       npwp: '12.345.678.9-012.345',
+      additionalAddress: [],
       email: 'admin@amansentosa.com',
     ),
     CustomerModel(
@@ -42,6 +55,7 @@ class CustomerDummy {
       address: 'Jl. S. Parman, Soho Podomoro no 26, Jakarta Barat, DKI Jakarta, Indonesia 441142',
       nik: '3175091234560003',
       npwp: '12.345.678.9-012.345',
+      additionalAddress: [],
       email: 'takasya@amansentosa.com',
     ),
     CustomerModel(
@@ -55,6 +69,7 @@ class CustomerDummy {
       address: 'Jl. S. Parman, Soho Podomoro no 26, Jakarta Barat, DKI Jakarta, Indonesia 441142',
       nik: '3175091234560003',
       npwp: '12.345.678.9-012.345',
+      additionalAddress: [],
       email: 'budiutomo@sinarutamajaya.com',
     ),
     CustomerModel(
@@ -68,6 +83,7 @@ class CustomerDummy {
       address: 'Jl. S. Parman, Soho Podomoro no 26, Jakarta Barat, DKI Jakarta, Indonesia 441142',
       nik: '3175091234560003',
       npwp: '12.345.678.9-012.345',
+      additionalAddress: [],
       email: 'admin@sbrmanufacture.com',
     ),
   ];
