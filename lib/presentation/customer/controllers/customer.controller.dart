@@ -7,6 +7,7 @@ class CustomerController extends GetxController {
   CustomerMainController ctrCustomerMain = Get.put(CustomerMainController());
   Rx<List<CustomerModel>> data = Rx([]);
   Rx<TextEditingController> searchCustomerCtr = Rx(TextEditingController());
+  Rxn<CustomerDetailType?> detailType = Rxn();
 
   @override
   void onInit() {
@@ -29,6 +30,26 @@ class CustomerController extends GetxController {
     ctrCustomerMain.getData().then((v) {
       data.value = ctrCustomerMain.data.value;
     });
+  }
+
+  void searchCustomer(String? query) {
+    if (query == null || query.isEmpty) {
+      data.value = ctrCustomerMain.data.value;
+    } else {
+      query = query.toLowerCase();
+
+      data.value = [
+        ...ctrCustomerMain.data.value.where((v) {
+          final String? name = v.companyName ?? v.customerName;
+          if (name == null) return true;
+
+          return name.toLowerCase().contains(query!);
+        })
+      ];
+    }
+    data.value = data.value.where((v) {
+      return detailType.value == null ? true : detailType.value == v.detailType;
+    }).toList();
   }
 
   void onClickItem(CustomerModel item) {}

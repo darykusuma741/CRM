@@ -1,5 +1,6 @@
 import 'package:crm/common/components/custom_scaffold.dart';
 import 'package:crm/common/constants/colors_name.dart';
+import 'package:crm/presentation/customer/filter/customer.filter.dart';
 import 'package:crm/presentation/customer/items/customer.items.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,8 +23,8 @@ class CustomerScreen extends GetView<CustomerController> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // FreightProductFilter(),
-            // SizedBox(height: 6.h),
+            CustomerFilter(),
+            SizedBox(height: 6.h),
             CustomerItems(),
           ],
         ),
