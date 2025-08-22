@@ -49,7 +49,8 @@ class LoginForm extends GetView<LoginController> {
             CustomButton(
               onTap: controller.onCLickLogin,
               title: 'Login',
-            )
+            ),
+            SizedBox(height: 16.h),
           ],
         ),
       );

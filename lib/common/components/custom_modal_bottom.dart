@@ -24,6 +24,7 @@ Future<T?> customModalBottom<T>(Widget child) async {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     child,
+                    SizedBox(height: MediaQuery.of(context).viewInsets.bottom),
                     SizedBox(height: MediaQuery.of(context).padding.bottom),
                   ],
                 ),

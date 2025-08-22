@@ -65,7 +65,8 @@ class MarkingDetailForm extends GetView<MarkingDetailController> {
               title: 'Submit',
               bgColor: ColorsName.blueDeep,
               onTap: () => controller.onSubmit(item),
-            )
+            ),
+            SizedBox(height: 16.h),
           ],
         ),
       );

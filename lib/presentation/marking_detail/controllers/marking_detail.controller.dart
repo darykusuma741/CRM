@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:crm/common/components/custom_modal_bottom.dart';
+import 'package:crm/common/helper/my_snack_bar.dart';
 import 'package:crm/controller/customer.main.controller.dart';
 import 'package:crm/data/enum/transport_by.dart';
 import 'package:crm/data/model/marking.model.dart';
@@ -130,6 +131,7 @@ class MarkingDetailController extends GetxController {
       }
     }).toList();
     markingsFix.value = markingsC;
+
     CustomerDetailController ctrCustomerDetail = Get.find<CustomerDetailController>();
     CustomerMainController ctrCustomerMain = Get.find<CustomerMainController>();
     CustomerController ctrCustomer = Get.find<CustomerController>();
@@ -139,5 +141,11 @@ class MarkingDetailController extends GetxController {
     ctrCustomer.getData();
 
     Get.back();
+
+    if (item == null) {
+      MySnackBar.success(Get.context!, title: 'Marking Added!', subTitle: 'You’ve successfully created a new marking.');
+    } else {
+      MySnackBar.success(Get.context!, title: 'Marking Updated!', subTitle: 'You’ve successfully updated the marking.');
+    }
   }
 }
