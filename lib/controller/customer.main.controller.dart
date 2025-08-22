@@ -11,6 +11,11 @@ class CustomerMainController extends GetxController {
     }
   }
 
+  Future addData(CustomerModel v) async {
+    final List<CustomerModel> existing = [v, ...data.value];
+    data.value = existing;
+  }
+
   Future editData(CustomerModel v) async {
     final List<CustomerModel> existing = [...data.value];
     final index = existing.indexWhere((e) => e.id == v.id);

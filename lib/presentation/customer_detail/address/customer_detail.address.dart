@@ -15,7 +15,7 @@ class CustomerDetailAddress extends GetView<CustomerDetailController> {
       final item = controller.item.value;
 
       return SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: 20.w),
+        padding: EdgeInsets.symmetric(horizontal: 16.w),
         child: Column(
           children: [
             SizedBox(height: 16.h),

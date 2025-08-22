@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:crm/data/enum/address_type.dart';
-import 'package:crm/data/enum/title_type.dart';
 import 'package:crm/data/model/additional_address.model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -60,7 +59,7 @@ class AddressFormController extends GetxController {
     title.value = titleValue;
     if (v != null) {
       addressType.value = v.addressType.toShortString();
-      titleType.value = v.title.toShortString();
+      titleType.value = v.title;
       contactNameCtr.value.text = v.contactName;
       jobPositionCtr.value.text = v.jobPosition ?? '';
       emailCtr.value.text = v.email ?? '';
@@ -132,7 +131,7 @@ class AddressFormController extends GetxController {
     if (item.value != null) {
       final editItem = item.value!.copyWith(
         addressType: AddressTypeExtension.fromString(addressType.value!),
-        title: TitleTypeExtension.fromString(titleType.value!),
+        title: titleType.value!,
         contactName: contactNameCtr.value.text,
         jobPosition: jobPositionCtr.value.text.isEmpty ? null : jobPositionCtr.value.text,
         email: emailCtr.value.text.isEmpty ? null : emailCtr.value.text,
@@ -148,7 +147,7 @@ class AddressFormController extends GetxController {
       final addItem = AdditionalAddressModel(
         id: Random().nextInt(999999),
         addressType: AddressTypeExtension.fromString(addressType.value!),
-        title: TitleTypeExtension.fromString(titleType.value!),
+        title: titleType.value!,
         contactName: contactNameCtr.value.text,
         jobPosition: jobPositionCtr.value.text.isEmpty ? null : jobPositionCtr.value.text,
         email: emailCtr.value.text.isEmpty ? null : emailCtr.value.text,

@@ -1,7 +1,9 @@
 import 'dart:math';
 
+import 'package:crm/data/dummy/title.dummy.dart';
 import 'package:crm/data/enum/address_type.dart';
-import 'package:crm/data/enum/title_type.dart';
+import 'package:crm/data/enum/customer_detail_type.dart';
+import 'package:crm/data/enum/customer_type.dart';
 import 'package:crm/data/enum/transport_by.dart';
 import 'package:crm/data/model/additional_address.model.dart';
 import 'package:crm/data/model/customer.model.dart';
@@ -24,7 +26,7 @@ class CustomerDummy {
         AdditionalAddressModel(
           id: Random().nextInt(999999),
           addressType: AddressType.contact,
-          title: TitleType.mr,
+          title: TitleDummy.data.first,
           contactName: 'Dary Kusuma',
           phoneNumber: '082398283892',
         ),

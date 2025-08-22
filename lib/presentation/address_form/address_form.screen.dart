@@ -3,8 +3,8 @@ import 'package:crm/common/components/custom_dropdown.dart';
 import 'package:crm/common/components/custom_text_editing.dart';
 import 'package:crm/common/constants/base_text.dart';
 import 'package:crm/common/constants/colors_name.dart';
+import 'package:crm/data/dummy/title.dummy.dart';
 import 'package:crm/data/enum/address_type.dart';
-import 'package:crm/data/enum/title_type.dart';
 import 'package:crm/presentation/address_form/not_contact/address_form.not_contact.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -49,10 +49,7 @@ class AddressFormScreen extends GetView<AddressFormController> {
             label: 'Title',
             selectedItem: controller.titleType.value,
             error: controller.titleTypeErr.value,
-            items: [
-              TitleType.mr.toShortString(),
-              TitleType.ms.toShortString(),
-            ],
+            items: TitleDummy.data,
             customContent: (p0) => p0 == null ? 'Select title' : p0.toString(),
             onChanged: (v) {
               controller.titleTypeErr.value = null;

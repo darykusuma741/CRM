@@ -5,6 +5,7 @@ export 'package:crm/presentation/call_activities/call_activities.screen.dart';
 export 'package:crm/presentation/check_in/check_in.screen.dart';
 export 'package:crm/presentation/customer/customer.screen.dart';
 export 'package:crm/presentation/customer_detail/customer_detail.screen.dart';
+export 'package:crm/presentation/customer_form/customer_form.screen.dart';
 export 'package:crm/presentation/document_activities/document_activities.screen.dart';
 export 'package:crm/presentation/face_scan/face_scan.screen.dart';
 export 'package:crm/presentation/freight_product/freight_product.screen.dart';

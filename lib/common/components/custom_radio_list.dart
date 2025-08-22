@@ -4,13 +4,13 @@ import 'package:crm/common/constants/colors_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CustomCheckList<T> extends StatelessWidget {
-  const CustomCheckList({super.key, this.required = true, this.error, this.label, this.selectItems, this.items, this.onClick});
+class CustomRadioList<T> extends StatelessWidget {
+  const CustomRadioList({super.key, this.required = true, this.error, this.label, this.selectItems, this.items, this.onClick});
   final bool required;
   final String? error;
   final String? label;
   final List<T>? items;
-  final List<T>? selectItems;
+  final T? selectItems;
   final Function(T v)? onClick;
 
   @override
@@ -35,13 +35,13 @@ class CustomCheckList<T> extends StatelessWidget {
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: items!.map((e) {
-                bool select = selectItems == null ? false : selectItems!.contains(e);
+                bool select = selectItems == null ? false : selectItems == e;
 
                 return InkWell(
                   onTap: () {
                     if (onClick != null) onClick!(e);
                   },
-                  borderRadius: BorderRadius.circular(3.r),
+                  borderRadius: BorderRadius.circular(13.r),
                   child: Container(
                     constraints: BoxConstraints(minWidth: 85.w),
                     padding: EdgeInsets.only(top: 1.5.h, bottom: 1.5.h),
@@ -49,7 +49,7 @@ class CustomCheckList<T> extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Icon(
-                          select ? Icons.check_box : Icons.check_box_outline_blank_outlined,
+                          select ? Icons.radio_button_checked_rounded : Icons.radio_button_off_rounded,
                           color: select ? ColorsName.blueSteel : ColorsName.grayDim,
                           size: 18.sp,
                         ),

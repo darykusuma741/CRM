@@ -1,10 +1,9 @@
 import 'package:crm/common/abstract/base_model.dart';
 import 'package:crm/data/enum/address_type.dart';
-import 'package:crm/data/enum/title_type.dart';
 
 class AdditionalAddressModel extends BaseModel<AdditionalAddressModel> {
   int id;
-  TitleType title;
+  String title;
   AddressType addressType;
   String contactName;
   String? jobPosition;
@@ -34,7 +33,7 @@ class AdditionalAddressModel extends BaseModel<AdditionalAddressModel> {
   @override
   AdditionalAddressModel copyWith({
     int? id,
-    TitleType? title,
+    String? title,
     AddressType? addressType,
     String? contactName,
     String? jobPosition,

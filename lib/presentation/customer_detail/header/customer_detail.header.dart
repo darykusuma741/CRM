@@ -1,6 +1,6 @@
 import 'package:crm/common/constants/base_text.dart';
 import 'package:crm/common/constants/colors_name.dart';
-import 'package:crm/data/model/customer.model.dart';
+import 'package:crm/data/enum/customer_detail_type.dart';
 import 'package:crm/infrastructure/navigation/routes.dart';
 import 'package:crm/presentation/customer_detail/controllers/customer_detail.controller.dart';
 import 'package:flutter/material.dart';

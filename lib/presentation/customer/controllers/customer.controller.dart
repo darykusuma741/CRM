@@ -1,4 +1,5 @@
 import 'package:crm/controller/customer.main.controller.dart';
+import 'package:crm/data/enum/customer_detail_type.dart';
 import 'package:crm/data/model/customer.model.dart';
 import 'package:crm/infrastructure/navigation/routes.dart';
 import 'package:flutter/material.dart';

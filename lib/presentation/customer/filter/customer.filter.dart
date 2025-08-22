@@ -2,7 +2,7 @@ import 'package:crm/common/components/custom_select_category.dart';
 import 'package:crm/common/components/custom_text_editing.dart';
 import 'package:crm/common/constants/colors_name.dart';
 import 'package:crm/common/constants/image_assets.dart';
-import 'package:crm/data/model/customer.model.dart';
+import 'package:crm/data/enum/customer_detail_type.dart';
 import 'package:crm/presentation/customer/controllers/customer.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

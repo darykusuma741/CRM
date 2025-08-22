@@ -18,6 +18,7 @@ class Routes {
   static const HOME = '/home';
   static const LEADS_DETAIL = '/leads-detail';
   static const LOGIN = '/login';
+  static const MARKING_DETAIL = '/marking-detail';
   static const MEETING_ACTIVITIES = '/meeting-activities';
   static const PRODUCT_CATEGORY = '/product-category';
   static const PRODUCT_CATEGORY_DETAIL = '/product-category-detail';
@@ -26,5 +27,5 @@ class Routes {
   static const QUOTATIONS = '/quotations';
   static const SNA_FORM = '/sna-form';
   static const SPLASH_SCREEN = '/splash-screen';
-  static const MARKING_DETAIL = '/marking-detail';
+  static const CUSTOMER_FORM = '/customer-form';
 }

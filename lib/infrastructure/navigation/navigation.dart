@@ -146,5 +146,10 @@ class Nav {
       page: () => const MarkingDetailScreen(),
       binding: MarkingDetailControllerBinding(),
     ),
+    GetPage(
+      name: Routes.CUSTOMER_FORM,
+      page: () => const CustomerFormScreen(),
+      binding: CustomerFormControllerBinding(),
+    ),
   ];
 }
