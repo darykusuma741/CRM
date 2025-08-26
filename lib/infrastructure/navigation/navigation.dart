@@ -67,9 +67,9 @@ class Nav {
       binding: CheckInControllerBinding(),
     ),
     GetPage(
-      name: Routes.ADD_LEAD,
-      page: () => const AddLeadScreen(),
-      binding: AddLeadControllerBinding(),
+      name: Routes.LEADS_FORM,
+      page: () => const LeadsFormScreen(),
+      binding: LeadsFormControllerBinding(),
     ),
     GetPage(
       name: Routes.MEETING_ACTIVITIES,

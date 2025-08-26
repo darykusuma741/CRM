@@ -17,7 +17,7 @@ class CustomDropdown<T> extends StatefulWidget {
   final bool required; // Flag (belum digunakan)
   final String? iconLeftAsset; // Ikon di sisi kiri input
   final void Function(T value)? onChanged; // Callback ketika item dipilih
-
+  final Offset? offset;
   const CustomDropdown({
     super.key,
     required this.items,
@@ -29,6 +29,7 @@ class CustomDropdown<T> extends StatefulWidget {
     this.customContent,
     this.showScroll = false,
     this.required = true,
+    this.offset,
   });
 
   @override
@@ -129,7 +130,9 @@ class _CustomDropdownState<T> extends State<CustomDropdown<T>> with TickerProvid
               link: _layerLink,
               showWhenUnlinked: false,
               // offset: Offset(0, canShowBelow ? size.height : (-dropdownMaxHeight + 100.0)),
-              offset: Offset(0, size.height),
+              offset: widget.offset != null
+                  ? Offset(widget.offset!.dx, canShowBelow ? size.height : (-dropdownMaxHeight + 100.0) + widget.offset!.dy)
+                  : Offset(0, size.height),
               child: FadeTransition(
                 opacity: _fadeAnimation,
                 child: SlideTransition(

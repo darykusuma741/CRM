@@ -2,6 +2,7 @@ import 'package:crm/common/components/custom_check_list.dart';
 import 'package:crm/common/components/custom_dropdown_multiple.dart';
 import 'package:crm/common/components/custom_radio_list.dart';
 import 'package:crm/common/constants/base_text.dart';
+import 'package:crm/data/dummy/product_category.dummy.dart';
 import 'package:crm/data/enum/customer_type.dart';
 import 'package:crm/data/enum/transport_by.dart';
 import 'package:crm/presentation/customer_form/controllers/customer_form.controller.dart';
@@ -53,7 +54,7 @@ class CustomerFormLogistics extends GetView<CustomerFormController> {
           CustomDropdownMultiple<String>(
             label: 'Product Category',
             selectedItem: controller.productCategory.value,
-            items: ['Electronics', 'Office Equipment'],
+            items: ProductCategoryDummy.data.map((e) => e.name).toList(),
             hint: 'Select product category',
             customContent: (p0) => p0.toString(),
             error: controller.productCategoryErr.value,

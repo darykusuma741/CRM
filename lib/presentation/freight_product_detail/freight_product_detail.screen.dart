@@ -21,9 +21,9 @@ class FreightProductDetailScreen extends GetView<FreightProductDetailController>
       return CustomScaffold(
         appBar: CustomAppBar(
           title: 'Freight Product Detail',
-          actions: [
-            IconButton(onPressed: controller.onPressMore, icon: Icon(Icons.more_vert_rounded)),
-          ],
+          // actions: [
+          //   IconButton(onPressed: controller.onPressMore, icon: Icon(Icons.more_vert_rounded)),
+          // ],
         ),
         backgroundColor: ColorsName.white,
         body: SingleChildScrollView(

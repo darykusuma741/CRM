@@ -1,8 +1,10 @@
 import 'package:crm/common/constants/base_text.dart';
 import 'package:crm/common/constants/colors_name.dart';
+import 'package:crm/common/constants/image_assets.dart';
 import 'package:crm/presentation/leads_detail/controllers/leads_detail.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class LeadsDetailButton extends GetView<LeadsDetailController> {
@@ -13,6 +15,41 @@ class LeadsDetailButton extends GetView<LeadsDetailController> {
     return Column(
       children: [
         Expanded(child: Container()),
+        Container(
+          width: 84.w,
+          height: 34.h,
+          decoration: BoxDecoration(color: ColorsName.blueDeep, borderRadius: BorderRadius.circular(100.r)),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            // spacing: 12.w,
+            children: [
+              Expanded(
+                child: InkWell(
+                  onTap: () {},
+                  child: SvgPicture.asset(
+                    ImageAssets.iconCallWhite,
+                    width: 14.w,
+                    height: 14.w,
+                  ),
+                ),
+              ),
+              Container(
+                width: 0.8,
+                height: 12.0,
+                decoration: BoxDecoration(color: ColorsName.white),
+              ),
+              Expanded(
+                child: SvgPicture.asset(
+                  ImageAssets.iconEmailWhite,
+                  width: 14.w,
+                  height: 14.w,
+                ),
+              ),
+            ],
+          ),
+        ),
+        SizedBox(height: 12.h),
         Container(
           width: double.infinity,
           height: 68.h,
@@ -62,12 +99,12 @@ class LeadsDetailButton extends GetView<LeadsDetailController> {
               SizedBox(width: 10.w),
               Expanded(
                 child: Material(
-                  color: ColorsName.white,
+                  color: Colors.transparent,
                   borderRadius: BorderRadius.circular(7.r),
                   child: InkWell(
-                    onTap: () {},
+                    onTap: controller.onClickConvertToPipeline,
                     borderRadius: BorderRadius.circular(7.r),
-                    child: Container(
+                    child: Ink(
                       width: 100.w,
                       height: 40.h,
                       decoration: BoxDecoration(

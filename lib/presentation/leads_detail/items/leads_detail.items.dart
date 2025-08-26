@@ -1,11 +1,9 @@
 import 'package:crm/common/components/custom_divider.dart';
 import 'package:crm/common/constants/base_text.dart';
 import 'package:crm/common/constants/colors_name.dart';
-import 'package:crm/common/constants/image_assets.dart';
 import 'package:crm/presentation/leads_detail/controllers/leads_detail.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class LeadsDetailItems extends GetView<LeadsDetailController> {
@@ -33,11 +31,9 @@ class LeadsDetailItems extends GetView<LeadsDetailController> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 spacing: 6.w,
-                children: [
-                  LeadsDetailItemsItem(title: 'Electronics'),
-                  LeadsDetailItemsItem(title: 'Office Equipment'),
-                  LeadsDetailItemsItem(title: 'Furniture'),
-                ],
+                children: controller.item.value.productCategoty.map((e) {
+                  return LeadsDetailItemsItem(title: e);
+                }).toList(),
               ),
             ),
             SizedBox(height: 14.h),
@@ -48,43 +44,43 @@ class LeadsDetailItems extends GetView<LeadsDetailController> {
               style: BaseText.grayCharcoal.copyWith(fontSize: 13.sp, fontWeight: FontWeight.w500),
             ),
             SizedBox(height: 12.h),
-            LeadsDetailItemsContent(label: 'Name', value: controller.data.value.name),
+            LeadsDetailItemsContent(label: 'Name', value: "${controller.item.value.title} ${controller.item.value.contactName}"),
             SizedBox(height: 10.h),
-            LeadsDetailItemsContent(label: 'Job Position', value: controller.data.value.jobPosition),
+            LeadsDetailItemsContent(label: 'Job Position', value: controller.item.value.jobPosition),
             SizedBox(height: 10.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                LeadsDetailItemsContent(label: 'Email', value: controller.data.value.email),
-                Container(
-                  width: 32.w,
-                  height: 32.w,
-                  decoration: BoxDecoration(color: ColorsName.blueSoft, borderRadius: BorderRadius.circular(100.r)),
-                  child: Center(
-                    child: SvgPicture.asset(
-                      ImageAssets.iconSvgIcon3,
-                      width: 14.w,
-                    ),
-                  ),
-                ),
+                LeadsDetailItemsContent(label: 'Email', value: controller.item.value.email),
+                // Container(
+                //   width: 32.w,
+                //   height: 32.w,
+                //   decoration: BoxDecoration(color: ColorsName.blueSoft, borderRadius: BorderRadius.circular(100.r)),
+                //   child: Center(
+                //     child: SvgPicture.asset(
+                //       ImageAssets.iconSvgIcon3,
+                //       width: 14.w,
+                //     ),
+                //   ),
+                // ),
               ],
             ),
             SizedBox(height: 10.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                LeadsDetailItemsContent(label: 'Phone Number', value: controller.data.value.noHp),
-                Container(
-                  width: 32.w,
-                  height: 32.w,
-                  decoration: BoxDecoration(color: ColorsName.blueSoft, borderRadius: BorderRadius.circular(100.r)),
-                  child: Center(
-                    child: SvgPicture.asset(
-                      ImageAssets.iconSvgPhone,
-                      width: 16.55.w,
-                    ),
-                  ),
-                ),
+                LeadsDetailItemsContent(label: 'Phone Number', value: controller.item.value.phoneNumber),
+                // Container(
+                //   width: 32.w,
+                //   height: 32.w,
+                //   decoration: BoxDecoration(color: ColorsName.blueSoft, borderRadius: BorderRadius.circular(100.r)),
+                //   child: Center(
+                //     child: SvgPicture.asset(
+                //       ImageAssets.iconSvgPhone,
+                //       width: 16.55.w,
+                //     ),
+                //   ),
+                // ),
               ],
             ),
             SizedBox(height: 14.h),
@@ -95,7 +91,7 @@ class LeadsDetailItems extends GetView<LeadsDetailController> {
               style: BaseText.grayCharcoal.copyWith(fontSize: 13.sp, fontWeight: FontWeight.w500),
             ),
             SizedBox(height: 12.h),
-            LeadsDetailItemsContent(label: 'Address', value: controller.data.value.address),
+            LeadsDetailItemsContent(label: 'Address', value: controller.item.value.streetAddress),
             SizedBox(height: 20.h),
           ],
         ),

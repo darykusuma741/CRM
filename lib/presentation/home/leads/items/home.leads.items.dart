@@ -65,7 +65,7 @@ class HomeLeadsItem extends StatelessWidget {
             ),
             SizedBox(height: 6.h),
             Text(
-              data.title,
+              data.leadName,
               style: BaseText.grayCharcoal.copyWith(fontSize: 13.sp),
             ),
             SizedBox(height: 4.h),
@@ -75,7 +75,7 @@ class HomeLeadsItem extends StatelessWidget {
             ),
             SizedBox(height: 2.h),
             Text(
-              data.noHp,
+              data.phoneNumber,
               style: BaseText.grayGraphiteDark.copyWith(fontSize: 11.sp, fontWeight: FontWeight.w300),
             ),
           ],

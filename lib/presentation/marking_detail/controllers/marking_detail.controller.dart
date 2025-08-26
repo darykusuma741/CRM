@@ -7,6 +7,7 @@ import 'package:crm/data/enum/transport_by.dart';
 import 'package:crm/data/model/marking.model.dart';
 import 'package:crm/presentation/customer/controllers/customer.controller.dart';
 import 'package:crm/presentation/customer_detail/controllers/customer_detail.controller.dart';
+import 'package:crm/presentation/marking_detail/detail/marking_detail.detail.dart';
 import 'package:crm/presentation/marking_detail/form/marking_detail.form.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -55,6 +56,10 @@ class MarkingDetailController extends GetxController {
       }
     }).toList();
     markingsFix.value = markingsC;
+  }
+
+  void onClickDetail(MarkingModel item) {
+    customModalBottom(MarkingDetailDetail(item: item));
   }
 
   void onClickEdit(MarkingModel item) {

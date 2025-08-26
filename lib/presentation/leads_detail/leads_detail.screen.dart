@@ -4,6 +4,7 @@ import 'package:crm/presentation/leads_detail/button/leads_detail.button.dart';
 import 'package:crm/presentation/leads_detail/header/leads_detail.header.dart';
 import 'package:crm/presentation/leads_detail/items/leads_detail.items.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 
@@ -28,6 +29,7 @@ class LeadsDetailScreen extends GetView<LeadsDetailController> {
               children: [
                 LeadsDetailHeader(),
                 LeadsDetailItems(),
+                SizedBox(height: 140.h),
               ],
             ),
           ),

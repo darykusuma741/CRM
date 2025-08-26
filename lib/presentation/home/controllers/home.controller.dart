@@ -38,7 +38,7 @@ class HomeController extends GetxController {
       query = query.toLowerCase();
 
       dataLeads.value = dataLeads.value.where((lead) {
-        return lead.title.toLowerCase().contains(query!) || lead.email.toLowerCase().contains(query) || lead.noHp.toLowerCase().contains(query);
+        return lead.phoneNumber.toLowerCase().contains(query!) || lead.email.toLowerCase().contains(query) || lead.email.toLowerCase().contains(query);
       }).toList();
     }
   }

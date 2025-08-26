@@ -34,6 +34,7 @@ class ImageAssets {
   static final String iconSvgChevronRightGradient = 'assets/images/icon-svg/chevron-right-gradient.svg';
   static final String iconSvgSearch = 'assets/images/icon-svg/search.svg';
   static final String iconSvgStar = 'assets/images/icon-svg/star.svg';
+  static final String iconSvgStarGray = 'assets/images/icon-svg/star-gray.svg';
   static final String iconSvgOther = 'assets/images/icon-svg/other.svg';
   static final String iconSvgIcon1 = 'assets/images/icon-svg/icon-1.svg';
   static final String iconSvgIcon2 = 'assets/images/icon-svg/icon-2.svg';
@@ -55,6 +56,9 @@ class ImageAssets {
   static final String iconSvgUpload = 'assets/images/icon-svg/upload.svg';
   static final String iconSvgdoNotDisturbOn = 'assets/images/icon-svg/do-not-disturb-on.svg';
   static final String iconSvgPdf = 'assets/images/icon-svg/pdf.svg';
+  static final String iconEmailWhite = 'assets/images/icon-svg/email-white.svg';
+  static final String iconCallWhite = 'assets/images/icon-svg/call-white.svg';
+  static final String iconSvgClose = 'assets/images/icon-svg/close.svg';
 
   // login
   static final String loginGroup1 = 'assets/images/login-svg/group-1.svg';

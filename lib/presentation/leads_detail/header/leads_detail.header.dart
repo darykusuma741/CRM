@@ -32,7 +32,7 @@ class LeadsDetailHeader extends GetView<LeadsDetailController> {
           Container(
             width: double.infinity,
             height: height,
-            padding: EdgeInsets.symmetric(horizontal: 16.w),
+            padding: EdgeInsets.only(left: 16.w),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -61,13 +61,16 @@ class LeadsDetailHeader extends GetView<LeadsDetailController> {
                           ),
                         ],
                       ),
-                      SvgPicture.asset(ImageAssets.iconSvgOther, width: 3.75.w),
+                      IconButton(
+                        onPressed: controller.onPressMore,
+                        icon: SvgPicture.asset(ImageAssets.iconSvgOther, width: 3.75.w),
+                      ),
                     ],
                   ),
                 ),
                 // SizedBox(height: 9.h),
                 Text(
-                  controller.data.value.title,
+                  controller.item.value.leadName,
                   style: BaseText.white.copyWith(
                     fontSize: 16.sp,
                     fontWeight: FontWeight.w500,
@@ -77,8 +80,8 @@ class LeadsDetailHeader extends GetView<LeadsDetailController> {
                 Row(
                   children: [
                     Text(
-                      controller.data.value.type.toShortString(),
-                      style: (controller.data.value.type == LeadsType.lost ? BaseText.redCherry : BaseText.greenPrimary).copyWith(
+                      controller.item.value.type.toShortString(),
+                      style: (controller.item.value.type == LeadsType.lost ? BaseText.redCherry : BaseText.greenPrimary).copyWith(
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w400,
                       ),
@@ -90,7 +93,7 @@ class LeadsDetailHeader extends GetView<LeadsDetailController> {
                       decoration: BoxDecoration(color: ColorsName.graySteelDark),
                     ),
                     SizedBox(width: 6.w),
-                    CustomRating(count: controller.data.value.rating),
+                    CustomRating(count: controller.item.value.rating),
                   ],
                 ),
                 SizedBox(height: 14.h),
@@ -99,7 +102,7 @@ class LeadsDetailHeader extends GetView<LeadsDetailController> {
                     SvgPicture.asset(ImageAssets.iconSvgIcon1, width: 14.w),
                     SizedBox(width: 8.w),
                     Text(
-                      "ScaleOcean",
+                      controller.item.value.companyName ?? '-',
                       style: BaseText.white.copyWith(
                         fontSize: 12.sp,
                         fontWeight: FontWeight.w400,

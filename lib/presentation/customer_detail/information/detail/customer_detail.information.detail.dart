@@ -1,10 +1,7 @@
 import 'package:crm/common/constants/base_text.dart';
-import 'package:crm/common/constants/colors_name.dart';
-import 'package:crm/common/constants/image_assets.dart';
 import 'package:crm/presentation/customer_detail/controllers/customer_detail.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class CustomerDetailInformationDetail extends GetView<CustomerDetailController> {
@@ -29,17 +26,17 @@ class CustomerDetailInformationDetail extends GetView<CustomerDetailController> 
                 Expanded(
                   child: _CustomerDetailInformationDetailItem(label: 'Email', value: item.email ?? '-'),
                 ),
-                Container(
-                  width: 32.w,
-                  height: 32.w,
-                  decoration: BoxDecoration(color: ColorsName.blueSoft, borderRadius: BorderRadius.circular(100.r)),
-                  child: Center(
-                    child: SvgPicture.asset(
-                      ImageAssets.iconSvgIcon3,
-                      width: 14.w,
-                    ),
-                  ),
-                ),
+                // Container(
+                //   width: 32.w,
+                //   height: 32.w,
+                //   decoration: BoxDecoration(color: ColorsName.blueSoft, borderRadius: BorderRadius.circular(100.r)),
+                //   child: Center(
+                //     child: SvgPicture.asset(
+                //       ImageAssets.iconSvgIcon3,
+                //       width: 14.w,
+                //     ),
+                //   ),
+                // ),
               ],
             ),
             SizedBox(height: 10.h),
@@ -49,17 +46,17 @@ class CustomerDetailInformationDetail extends GetView<CustomerDetailController> 
                 Expanded(
                   child: _CustomerDetailInformationDetailItem(label: 'Phone Number', value: item.phoneNumber ?? '-'),
                 ),
-                Container(
-                  width: 32.w,
-                  height: 32.w,
-                  decoration: BoxDecoration(color: ColorsName.blueSoft, borderRadius: BorderRadius.circular(100.r)),
-                  child: Center(
-                    child: SvgPicture.asset(
-                      ImageAssets.iconSvgPhone,
-                      width: 14.w,
-                    ),
-                  ),
-                ),
+                // Container(
+                //   width: 32.w,
+                //   height: 32.w,
+                //   decoration: BoxDecoration(color: ColorsName.blueSoft, borderRadius: BorderRadius.circular(100.r)),
+                //   child: Center(
+                //     child: SvgPicture.asset(
+                //       ImageAssets.iconSvgPhone,
+                //       width: 14.w,
+                //     ),
+                //   ),
+                // ),
               ],
             ),
             SizedBox(height: 10.h),

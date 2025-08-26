@@ -54,7 +54,7 @@ class MarkingDetailScreen extends GetView<MarkingDetailController> {
                     spacing: 8.h,
                     children: controller.markingsFix.value.map((e) {
                       return InkWell(
-                        onTap: () => controller.onClickEdit(e),
+                        onTap: () => controller.onClickDetail(e),
                         borderRadius: BorderRadius.circular(6.r),
                         child: Ink(
                           width: double.infinity,

@@ -1,5 +1,6 @@
 import 'package:crm/common/components/custom_dropdown.dart';
 import 'package:crm/common/components/custom_text_editing.dart';
+import 'package:crm/data/dummy/state.dummy.dart';
 import 'package:crm/presentation/customer_form/controllers/customer_form.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -55,11 +56,7 @@ class CustomerFormDetailCompany extends GetView<CustomerFormController> {
             label: 'State',
             selectedItem: controller.state.value,
             error: controller.stateErr.value,
-            items: [
-              'Jawa Tengah',
-              'Jawa Barat',
-              'DKI Jakarta',
-            ],
+            items: StateDummy.data,
             customContent: (p0) => p0 == null ? 'Select state' : p0.toString(),
             onChanged: (v) {
               controller.stateErr.value = null;

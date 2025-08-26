@@ -5,7 +5,6 @@ class Routes {
 
   static const ACTIVITY_HISTORY = '/activity-history';
   static const ADDRESS_FORM = '/address-form';
-  static const ADD_LEAD = '/add-lead';
   static const CALL_ACTIVITIES = '/call-activities';
   static const CHECK_IN = '/check-in';
   static const CUSTOMER = '/customer';
@@ -17,6 +16,7 @@ class Routes {
   static const FREIGHT_PRODUCT_FORM = '/freight-product-form';
   static const HOME = '/home';
   static const LEADS_DETAIL = '/leads-detail';
+  static const LEADS_FORM = '/leads-form';
   static const LOGIN = '/login';
   static const MARKING_DETAIL = '/marking-detail';
   static const MEETING_ACTIVITIES = '/meeting-activities';
