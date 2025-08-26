@@ -2,6 +2,7 @@ import 'package:crm/common/components/custom_gradient_text.dart';
 import 'package:crm/common/components/custom_text_editing.dart';
 import 'package:crm/common/constants/base_text.dart';
 import 'package:crm/common/constants/image_assets.dart';
+import 'package:crm/infrastructure/navigation/routes.dart';
 import 'package:crm/presentation/home/controllers/home.controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -35,23 +36,28 @@ class HomeHeaderLeads extends GetView<HomeController> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text('My Leads', style: BaseText.white.copyWith(fontSize: 16.sp)),
-                  Container(
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color: const Color(0xFF2E7ACB).withOpacity(0.2), // warna shadow
-                          offset: const Offset(0, 1), // x = 0, y = 1
-                          blurRadius: 12.r, // radius blur
-                          spreadRadius: 0, // sesuai CSS
-                        ),
-                      ],
-                    ),
-                    child: Row(
-                      children: [
-                        CustomGradientText(text: 'See My Pipeline', style: BaseText.white.copyWith(fontSize: 12.sp, fontWeight: FontWeight.w500)),
-                        SizedBox(width: 3.5.w),
-                        SvgPicture.asset(ImageAssets.iconSvgChevronRightGradient, height: 8.h),
-                      ],
+                  InkWell(
+                    onTap: () {
+                      Get.toNamed(Routes.PIPELINE);
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: const Color(0xFF2E7ACB).withOpacity(0.2), // warna shadow
+                            offset: const Offset(0, 1), // x = 0, y = 1
+                            blurRadius: 12.r, // radius blur
+                            spreadRadius: 0, // sesuai CSS
+                          ),
+                        ],
+                      ),
+                      child: Row(
+                        children: [
+                          CustomGradientText(text: 'See My Pipeline', style: BaseText.white.copyWith(fontSize: 12.sp, fontWeight: FontWeight.w500)),
+                          SizedBox(width: 3.5.w),
+                          SvgPicture.asset(ImageAssets.iconSvgChevronRightGradient, height: 8.h),
+                        ],
+                      ),
                     ),
                   ),
                 ],

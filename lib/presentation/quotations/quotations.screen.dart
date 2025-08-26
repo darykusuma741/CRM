@@ -11,6 +11,9 @@ class QuotationsScreen extends GetView<QuotationsController> {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
+      appBar: CustomAppBar(
+        title: 'Quotations',
+      ),
       backgroundColor: ColorsName.white,
       body: const Center(
         child: Text(

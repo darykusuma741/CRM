@@ -1,5 +1,4 @@
 export 'package:crm/infrastructure/navigation/bindings/controllers/activity_history.controller.binding.dart';
-export 'package:crm/infrastructure/navigation/bindings/controllers/leads_form.controller.binding.dart';
 export 'package:crm/infrastructure/navigation/bindings/controllers/address_form.controller.binding.dart';
 export 'package:crm/infrastructure/navigation/bindings/controllers/call_activities.controller.binding.dart';
 export 'package:crm/infrastructure/navigation/bindings/controllers/check_in.controller.binding.dart';
@@ -13,9 +12,11 @@ export 'package:crm/infrastructure/navigation/bindings/controllers/freight_produ
 export 'package:crm/infrastructure/navigation/bindings/controllers/freight_product_form.controller.binding.dart';
 export 'package:crm/infrastructure/navigation/bindings/controllers/home.controller.binding.dart';
 export 'package:crm/infrastructure/navigation/bindings/controllers/leads_detail.controller.binding.dart';
+export 'package:crm/infrastructure/navigation/bindings/controllers/leads_form.controller.binding.dart';
 export 'package:crm/infrastructure/navigation/bindings/controllers/login.controller.binding.dart';
 export 'package:crm/infrastructure/navigation/bindings/controllers/marking_detail.controller.binding.dart';
 export 'package:crm/infrastructure/navigation/bindings/controllers/meeting_activities.controller.binding.dart';
+export 'package:crm/infrastructure/navigation/bindings/controllers/pipeline.controller.binding.dart'; 
 export 'package:crm/infrastructure/navigation/bindings/controllers/product_category.controller.binding.dart';
 export 'package:crm/infrastructure/navigation/bindings/controllers/product_category_detail.controller.binding.dart';
 export 'package:crm/infrastructure/navigation/bindings/controllers/product_category_form.controller.binding.dart';

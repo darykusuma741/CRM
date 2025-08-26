@@ -1,5 +1,4 @@
 export 'package:crm/presentation/activity_history/activity_history.screen.dart';
-export 'package:crm/presentation/leads_form/leads_form.screen.dart';
 export 'package:crm/presentation/address_form/address_form.screen.dart';
 export 'package:crm/presentation/call_activities/call_activities.screen.dart';
 export 'package:crm/presentation/check_in/check_in.screen.dart';
@@ -13,9 +12,11 @@ export 'package:crm/presentation/freight_product_detail/freight_product_detail.s
 export 'package:crm/presentation/freight_product_form/freight_product_form.screen.dart';
 export 'package:crm/presentation/home/home.screen.dart';
 export 'package:crm/presentation/leads_detail/leads_detail.screen.dart';
+export 'package:crm/presentation/leads_form/leads_form.screen.dart';
 export 'package:crm/presentation/login/login.screen.dart';
 export 'package:crm/presentation/marking_detail/marking_detail.screen.dart';
 export 'package:crm/presentation/meeting_activities/meeting_activities.screen.dart';
+export 'package:crm/presentation/pipeline/pipeline.screen.dart';
 export 'package:crm/presentation/product_category/product_category.screen.dart';
 export 'package:crm/presentation/product_category_detail/product_category_detail.screen.dart';
 export 'package:crm/presentation/product_category_form/product_category_form.screen.dart';

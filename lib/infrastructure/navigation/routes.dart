@@ -9,6 +9,7 @@ class Routes {
   static const CHECK_IN = '/check-in';
   static const CUSTOMER = '/customer';
   static const CUSTOMER_DETAIL = '/customer-detail';
+  static const CUSTOMER_FORM = '/customer-form';
   static const DOCUMENT_ACTIVITIES = '/document-activities';
   static const FACE_SCAN = '/face-scan';
   static const FREIGHT_PRODUCT = '/freight-product';
@@ -27,5 +28,5 @@ class Routes {
   static const QUOTATIONS = '/quotations';
   static const SNA_FORM = '/sna-form';
   static const SPLASH_SCREEN = '/splash-screen';
-  static const CUSTOMER_FORM = '/customer-form';
+  static const PIPELINE = '/pipeline';
 }

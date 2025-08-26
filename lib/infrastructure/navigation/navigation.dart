@@ -151,5 +151,10 @@ class Nav {
       page: () => const CustomerFormScreen(),
       binding: CustomerFormControllerBinding(),
     ),
+    GetPage(
+      name: Routes.PIPELINE,
+      page: () => const PipelineScreen(),
+      binding: PipelineControllerBinding(),
+    ),
   ];
 }
