@@ -93,7 +93,7 @@ class LeadsDetailHeader extends GetView<LeadsDetailController> {
                       decoration: BoxDecoration(color: ColorsName.graySteelDark),
                     ),
                     SizedBox(width: 6.w),
-                    CustomRating(count: controller.item.value.rating),
+                    CustomRating(count: controller.item.value.priority),
                   ],
                 ),
                 SizedBox(height: 14.h),

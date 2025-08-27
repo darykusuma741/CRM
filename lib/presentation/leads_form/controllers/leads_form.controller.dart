@@ -59,7 +59,7 @@ class LeadsFormController extends GetxController {
     if (Get.arguments != null) {
       item.value = Get.arguments;
       leadNameCtr.value.text = item.value?.leadName ?? '';
-      priority.value = item.value?.rating ?? 0;
+      priority.value = item.value?.priority ?? 0;
       companyNameCtr.value.text = item.value?.companyName ?? '';
       companyWebsiteCtr.value.text = item.value?.companyWebsite ?? '';
       productCategory.value = item.value?.productCategoty ?? [];

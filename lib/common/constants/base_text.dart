@@ -155,6 +155,15 @@ class BaseText {
   static TextStyle blueBrightSky = textStyle.copyWith(color: ColorsName.blueBrightSky);
   static TextStyle blueSoftCloud = textStyle.copyWith(color: ColorsName.blueSoftCloud);
   static TextStyle grayLightest = textStyle.copyWith(color: ColorsName.grayLightest);
+  static TextStyle blueNight = textStyle.copyWith(color: ColorsName.blueNight);
+  static TextStyle blueAquaPale = textStyle.copyWith(color: ColorsName.blueAquaPale);
+  static TextStyle yellowPale = textStyle.copyWith(color: ColorsName.yellowPale);
+  static TextStyle redSoftPale = textStyle.copyWith(color: ColorsName.redSoftPale);
+  static TextStyle greenAquaMint = textStyle.copyWith(color: ColorsName.greenAquaMint);
+  static TextStyle yellowSoft = textStyle.copyWith(color: ColorsName.yellowSoft);
+  static TextStyle redBlush = textStyle.copyWith(color: ColorsName.redBlush);
+  static TextStyle tealBright = textStyle.copyWith(color: ColorsName.tealBright);
+  static TextStyle yellowGolden = textStyle.copyWith(color: ColorsName.yellowGolden);
 
   static FontWeight light = FontWeight.w300;
   static FontWeight regular = FontWeight.w400;

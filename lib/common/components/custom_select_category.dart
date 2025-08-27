@@ -16,14 +16,20 @@ class CustomSelectCategory<T> extends StatelessWidget {
       padding: EdgeInsets.only(left: 16.w),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
-        spacing: 8.w,
-        children: items.map((e) {
-          return _CustomSelectCategoryItem(
-            s: e,
-            select: e.value == selectItem,
-            onTap: (onTap == null) ? null : () => onTap!(e.value),
-          );
-        }).toList(),
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            spacing: 8.w,
+            children: items.map((e) {
+              return _CustomSelectCategoryItem(
+                s: e,
+                select: e.value == selectItem,
+                onTap: (onTap == null) ? null : () => onTap!(e.value),
+              );
+            }).toList(),
+          ),
+          SizedBox(width: 16.w),
+        ],
       ),
     );
   }

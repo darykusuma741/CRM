@@ -1,9 +1,9 @@
+import 'package:crm/controller/pipeline.main.controller.dart';
 import 'package:get/get.dart';
 
 class PipelineController extends GetxController {
-  //TODO: Implement PipelineController
+  final pipelineMainCtr = Get.put(PipelineMainController());
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -11,6 +11,7 @@ class PipelineController extends GetxController {
 
   @override
   void onReady() {
+    getData();
     super.onReady();
   }
 
@@ -19,5 +20,7 @@ class PipelineController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
+  void getData() {
+    pipelineMainCtr.getData();
+  }
 }

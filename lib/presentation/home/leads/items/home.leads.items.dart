@@ -60,7 +60,7 @@ class HomeLeadsItem extends StatelessWidget {
                     ),
                   ),
                 ),
-                CustomRating(count: data.rating),
+                CustomRating(count: data.priority),
               ],
             ),
             SizedBox(height: 6.h),

@@ -15,7 +15,7 @@ class CustomRating extends StatelessWidget {
         count,
         (index) => SvgPicture.asset(
           ImageAssets.iconSvgStar,
-          width: 14.93.w,
+          width: 14.w,
         ),
       ),
     );

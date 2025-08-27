@@ -20,17 +20,23 @@ class HomeLeads extends GetView<HomeLeads> {
       floatingActionButton: CustomFloatingActionContainer(onTap: () {
         Get.toNamed(Routes.LEADS_FORM);
       }),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            HomeHeaderLeads(),
-            SizedBox(height: 10.h),
-            HomeLeadsCategory(),
-            SizedBox(height: 14.h),
-            HomeLeadsItems(),
-            SizedBox(height: 20.h),
-          ],
-        ),
+      body: Column(
+        children: [
+          HomeHeaderLeads(),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  SizedBox(height: 10.h),
+                  HomeLeadsCategory(),
+                  SizedBox(height: 14.h),
+                  HomeLeadsItems(),
+                  SizedBox(height: 20.h),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

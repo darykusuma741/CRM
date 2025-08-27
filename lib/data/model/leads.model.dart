@@ -16,7 +16,7 @@ class LeadsModel extends BaseModel<LeadsModel> {
   String state;
   String country;
   String postalCode;
-  int rating;
+  int priority;
   LeadsType type;
 
   LeadsModel({
@@ -35,7 +35,7 @@ class LeadsModel extends BaseModel<LeadsModel> {
     required this.state,
     required this.country,
     required this.postalCode,
-    required this.rating,
+    this.priority = 0,
     required this.type,
   });
 
@@ -56,7 +56,7 @@ class LeadsModel extends BaseModel<LeadsModel> {
     String? state,
     String? country,
     String? postalCode,
-    int? rating,
+    int? priority,
     LeadsType? type,
   }) {
     return LeadsModel(
@@ -75,7 +75,7 @@ class LeadsModel extends BaseModel<LeadsModel> {
       state: state ?? this.state,
       country: country ?? this.country,
       postalCode: postalCode ?? this.postalCode,
-      rating: rating ?? this.rating,
+      priority: priority ?? this.priority,
       type: type ?? this.type,
     );
   }

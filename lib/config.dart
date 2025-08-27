@@ -10,6 +10,7 @@ class ConfigEnvironments {
   static final List<Map<String, String>> _availableEnvironments = [
     {
       'env': Environments.LOCAL,
+      // 'url': 'https://scalegate.scaleisle.com/b2/',
       'url': 'http://localhost:8080/api/',
     },
     {

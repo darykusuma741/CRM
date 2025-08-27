@@ -1,6 +1,10 @@
 import 'package:crm/common/components/custom_scaffold.dart';
+import 'package:crm/common/constants/colors_name.dart';
+import 'package:crm/presentation/pipeline/filter/pipeline.filter.dart';
 import 'package:crm/presentation/pipeline/header/pipeline.header.dart';
+import 'package:crm/presentation/pipeline/items/pipeline.items.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 
@@ -11,15 +15,24 @@ class PipelineScreen extends GetView<PipelineController> {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
-      appBar: CustomAppBar(
-        title: 'My Pipeline',
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            PipelineHeader(),
-          ],
-        ),
+      light: true,
+      backgroundColor: ColorsName.white,
+      body: Column(
+        children: [
+          PipelineHeader(),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  SizedBox(height: 10.h),
+                  PipelineFilter(),
+                  SizedBox(height: 14.h),
+                  PipelineItems(),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
