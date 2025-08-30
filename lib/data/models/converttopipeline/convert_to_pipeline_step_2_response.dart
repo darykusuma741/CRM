@@ -1,0 +1,1 @@
+class ConvertToPipelineStep2Response {}

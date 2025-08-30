@@ -8,15 +8,24 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
+import 'common/constants/common_constants.dart';
+import 'common/environmentconfig/dev_environment_config.dart';
+import 'common/environmentconfig/environment_config.dart';
+import 'common/injections/injections.dart';
 import 'infrastructure/navigation/navigation.dart';
 import 'infrastructure/navigation/routes.dart';
 
 void main() async {
   runZonedGuarded(
     () async {
+      EnvironmentConfig.instance = DevEnvironmentConfig();
+      await Injections.initialize();
       var initialRoute = await Routes.initialRoute;
       WidgetsFlutterBinding.ensureInitialized();
+      await Hive.initFlutter();
+      await Hive.openBox(CommonConstants.settingHiveTable);
       await SystemChrome.setPreferredOrientations([
         DeviceOrientation.portraitUp,
         DeviceOrientation.portraitDown,
